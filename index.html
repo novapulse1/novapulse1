@@ -42,42 +42,65 @@
         </div>
     </section>
 
-    <section id="services" class="py-24 relative z-10 bg-slate-950/50">
+    <section id="services" class="py-24 bg-slate-950 border-t border-slate-800 relative">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Core Capabilities</h2>
-                <p class="text-slate-400 max-w-xl mx-auto">High-impact solutions tailored to handle your operational heavy lifting.</p>
-            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition-all group">
-                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xl mb-6 group-hover:bg-cyan-500 group-hover:text-slate-900 transition-all">
-                        <i class="fa-solid fa-network-wired"></i>
+            <div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Our Expertise</h2>
+                
+                <div class="flex flex-col sm:flex-row w-full md:w-auto gap-4">
+                    <div class="relative w-full sm:w-64">
+                        <input type="text" id="serviceSearch" onkeyup="filterServices()" placeholder="Search services..." class="w-full bg-slate-900 border border-slate-700 text-slate-300 rounded-xl py-3 pl-4 pr-10 focus:outline-none focus:border-cyan-500 transition-colors">
+                        <svg class="w-5 h-5 text-slate-500 absolute right-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">HRMS & Workforce Consulting</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Streamlining human capital infrastructure, boosting accountability, and embedding tracking frameworks that stick.</p>
+                    
+                    <button onclick="toggleModal('expertModal')" class="px-6 py-3 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-semibold transition-all whitespace-nowrap shadow-lg shadow-cyan-900/50">
+                        <i class="fa-solid fa-headset mr-2"></i> Ask an Expert
+                    </button>
                 </div>
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition-all group">
-                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xl mb-6 group-hover:bg-cyan-500 group-hover:text-slate-900 transition-all">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Intelligent AI Solutions</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Integrating smart automation and data-driven tools directly into your active workflows to eliminate redundancy.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="servicesGrid">
+                
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors service-card">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-6 border-b border-slate-800 pb-4">Lead Generation</h3>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> B2B Calling Data</li>
+                        <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> B2B Lead Generation</li>
+                    </ul>
                 </div>
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition-all group">
-                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xl mb-6 group-hover:bg-cyan-500 group-hover:text-slate-900 transition-all">
-                        <i class="fa-solid fa-bolt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Sales Execution Frameworks</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Building aggressive, data-backed B2B outbound strategies and upskilling sales teams to drive real revenue.</p>
+
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors service-card">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-6 border-b border-slate-800 pb-4">Sessions</h3>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Training of Sales</li>
+                        <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Sales Enhancement</li>
+                        <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Motivational</li>
+                        <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Stress Management</li>
+                        <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Work-Life Balance</li>
+                    </ul>
                 </div>
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition-all group">
-                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xl mb-6 group-hover:bg-cyan-500 group-hover:text-slate-900 transition-all">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Business Strategy</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Write a direct and clear description of this specific business service here.</p>
+
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors service-card">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-6 border-b border-slate-800 pb-4">Services</h3>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> HRMS Consultant</li>
+                        <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Dealership</li>
+                        <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Hiring Consultant</li>
+                        <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Partnership</li>
+                        <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Startup Specialist</li>
+                        <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Digital Transformation</li>
+                    </ul>
                 </div>
+
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors service-card">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-6 border-b border-slate-800 pb-4">Products</h3>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Sales & Purchase Raw Material</li>
+                        <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Promotions</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </section>
@@ -98,7 +121,7 @@
             <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/3 flex justify-center">
                 <div class="relative w-64 h-64 rounded-full overflow-hidden border-4 border-cyan-500/30 shadow-2xl shadow-cyan-500/20">
-                <img src="Founder.png.jpeg" alt="Yatender Singh" class="w-full h-full object-cover">
+                <img src="founder.jpg" alt="Yatender Singh" class="w-full h-full object-cover">
                 </div>
             </div>
             
@@ -128,7 +151,7 @@
             <p class="text-slate-400 mb-10 max-w-md mx-auto">Connect with us instantly via WhatsApp or professional networks.</p>
             
             <div class="flex flex-wrap justify-center gap-6">
-            <a href="https://wa.me/8796623604" target="_blank" class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-all">
+            <a href="https://wa.me/+918796623604" target="_blank" class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-all">
                 <i class="fa-brands fa-whatsapp text-xl"></i> Message on WhatsApp
             </a>
             <a href="https://www.linkedin.com/in/yatender-singh-13a557409/" target="_blank" class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-750 text-slate-200 font-semibold border border-slate-700 transition-all">
@@ -139,6 +162,101 @@
             <p class="text-xs text-slate-600 mt-16">&copy; 2026 Nova Pulse. All rights reserved.</p>
         </div>
     </section>
+
+    <div id="expertModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex justify-center items-center p-4">
+        <div class="bg-slate-900 w-full max-w-md rounded-2xl border border-slate-700 shadow-2xl relative">
+            <button onclick="toggleModal('expertModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <div class="p-8">
+                <h3 class="text-2xl font-bold text-white mb-6">Ask an Expert</h3>
+                <form id="expertForm" onsubmit="submitToWhatsApp(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-sm text-slate-400 mb-1">Full Name</label>
+                        <input type="text" id="expName" required class="w-full bg-slate-950 border border-slate-700 text-slate-200 rounded-lg py-2 px-4 focus:outline-none focus:border-cyan-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-slate-400 mb-1">Contact Number</label>
+                        <input type="tel" id="expPhone" required class="w-full bg-slate-950 border border-slate-700 text-slate-200 rounded-lg py-2 px-4 focus:outline-none focus:border-cyan-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-slate-400 mb-1">Service Required</label>
+                        <select id="expService" required class="w-full bg-slate-950 border border-slate-700 text-slate-200 rounded-lg py-2 px-4 focus:outline-none focus:border-cyan-500 appearance-none">
+                            <option value="">Select a service...</option>
+                            <option value="Lead Generation">Lead Generation</option>
+                            <option value="Training/Sessions">Training / Sessions</option>
+                            <option value="Consulting Services">Consulting Services (HRMS, Hiring, etc.)</option>
+                            <option value="Products">Products & Materials</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-slate-400 mb-1">City / Address</label>
+                        <input type="text" id="expAddress" required class="w-full bg-slate-950 border border-slate-700 text-slate-200 rounded-lg py-2 px-4 focus:outline-none focus:border-cyan-500">
+                    </div>
+                    <button type="submit" class="w-full mt-4 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition-colors">
+                        Submit via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Search Functionality
+        function filterServices() {
+            let input = document.getElementById('serviceSearch').value.toLowerCase();
+            let cards = document.querySelectorAll('.service-card');
+            
+            cards.forEach(card => {
+                let items = card.querySelectorAll('.service-item');
+                let hasVisibleItem = false;
+                
+                items.forEach(item => {
+                    if (item.textContent.toLowerCase().includes(input)) {
+                        item.style.display = "";
+                        hasVisibleItem = true;
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+                
+                // Hide the whole category if no items match
+                if (hasVisibleItem || card.querySelector('h3').textContent.toLowerCase().includes(input)) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        // Modal Toggle
+        function toggleModal(modalID) {
+            let modal = document.getElementById(modalID);
+            modal.classList.toggle('hidden');
+        }
+
+        // Form Submit to WhatsApp
+        function submitToWhatsApp(e) {
+            e.preventDefault(); 
+            
+            let name = document.getElementById('expName').value;
+            let phone = document.getElementById('expPhone').value;
+            let service = document.getElementById('expService').value;
+            let address = document.getElementById('expAddress').value;
+            
+            let message = `*New Expert Inquiry*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Interested In:* ${service}\n*Address:* ${address}`;
+            let encodedMessage = encodeURIComponent(message);
+            
+            let waNumber = "918796623604"; 
+            
+            window.open(`https://wa.me/${waNumber}?text=${encodedMessage}`, '_blank');
+            
+            toggleModal('expertModal');
+            document.getElementById('expertForm').reset();
+        }
+    </script>
 
 </body>
 </html>
