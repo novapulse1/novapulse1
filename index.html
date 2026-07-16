@@ -1,69 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Pulse | Smart Business Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white transition-colors duration-300">
 
-    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+    <nav class="fixed w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3 font-bold text-xl tracking-wide">
                 <img src="Logo.png" alt="Nova Pulse Logo" class="h-20 w-auto object-contain">         
             </div>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-                <a href="#services" class="hover:text-cyan-400 transition-colors flex items-center gap-2">
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="#services" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center gap-2">
                     <i class="fa-solid fa-briefcase"></i> Services
                 </a>
                 
-                <a href="products.html" class="hover:text-cyan-400 transition-colors flex items-center gap-2">
+                <a href="products.html" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center gap-2">
                     <i class="fa-solid fa-box-open"></i> Products
                 </a>
 
-                <a href="#about" class="hover:text-cyan-400 transition-colors flex items-center gap-2">
+                <a href="#about" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center gap-2">
                     <i class="fa-solid fa-circle-info"></i> About
                 </a>
-                <a href="#contact" class="hover:text-white bg-cyan-600 hover:bg-cyan-500 px-5 py-2.5 rounded-full text-slate-900 font-semibold transition-all">Get in Touch</a>
+                <a href="#contact" class="hover:text-white bg-cyan-600 hover:bg-cyan-500 px-5 py-2.5 rounded-full text-white dark:text-slate-900 font-semibold transition-all">Get in Touch</a>
+                
+                <button onclick="toggleTheme()" class="p-2 w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" title="Toggle Theme">
+                    <i class="fa-solid fa-moon hidden dark:block text-slate-300 hover:text-cyan-400 text-lg"></i>
+                    <i class="fa-solid fa-sun block dark:hidden text-slate-600 hover:text-cyan-600 text-lg"></i>
+                </button>
             </div>
         </div>
     </nav>
 
     <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,#1e293b,transparent_50%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,#e2e8f0,transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_30%,#1e293b,transparent_50%)] transition-colors duration-300"></div>
         <div class="relative max-w-5xl mx-auto px-6 text-center z-10">
-            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-6 animate-pulse">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-cyan-100 dark:bg-cyan-500/10 text-cyan-700 dark:text-cyan-400 border border-cyan-200 dark:border-cyan-500/20 mb-6 animate-pulse">
                 Next-Gen Business Evolution
             </span>
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6">
                 Empowering Growth.<br>
-                <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent">Driving Success.</span>
+                <span class="bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 dark:from-cyan-400 dark:via-blue-500 dark:to-indigo-500 bg-clip-text text-transparent">Driving Success.</span>
             </h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
                 We optimize your operations, align your workforce tech, and deploy intelligent execution frameworks to scale business efficiency.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#services" class="px-8 py-4 rounded-xl bg-cyan-500 text-slate-900 font-bold hover:bg-cyan-400 transition-all shadow-lg shadow-cyan-500/20">Explore Services</a>
-                <a href="#contact" class="px-8 py-4 rounded-xl bg-slate-800 text-slate-200 font-semibold hover:bg-slate-700 transition-all border border-slate-700">Contact Us</a>
+                <a href="#services" class="px-8 py-4 rounded-xl bg-cyan-500 text-white dark:text-slate-900 font-bold hover:bg-cyan-600 dark:hover:bg-cyan-400 transition-all shadow-lg shadow-cyan-500/20">Explore Services</a>
+                <a href="#contact" class="px-8 py-4 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold hover:bg-slate-300 dark:hover:bg-slate-700 transition-all border border-slate-300 dark:border-slate-700">Contact Us</a>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-24 bg-slate-950 border-t border-slate-800 relative">
+    <section id="services" class="py-24 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 relative transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-6">
             
             <div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Our Expertise</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Our Expertise</h2>
                 
                 <div class="flex flex-col sm:flex-row w-full md:w-auto gap-4">
                     <div class="relative w-full sm:w-64">
-                        <input type="text" id="serviceSearch" onkeyup="filterServices()" placeholder="Search services..." class="w-full bg-slate-900 border border-slate-700 text-slate-300 rounded-xl py-3 pl-4 pr-10 focus:outline-none focus:border-cyan-500 transition-colors">
-                        <svg class="w-5 h-5 text-slate-500 absolute right-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        <input type="text" id="serviceSearch" onkeyup="filterServices()" placeholder="Search services..." class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-slate-300 rounded-xl py-3 pl-4 pr-10 focus:outline-none focus:border-cyan-500 transition-colors">
+                        <svg class="w-5 h-5 text-slate-400 dark:text-slate-500 absolute right-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                     </div>
                     
-                    <button onclick="toggleModal('expertModal')" class="px-6 py-3 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-semibold transition-all whitespace-nowrap shadow-lg shadow-cyan-900/50">
+                    <button onclick="toggleModal('expertModal')" class="px-6 py-3 rounded-xl bg-cyan-600 hover:bg-cyan-700 dark:hover:bg-cyan-500 text-white font-semibold transition-all whitespace-nowrap shadow-lg shadow-cyan-900/50">
                         <i class="fa-solid fa-headset mr-2"></i> Ask an Expert
                     </button>
                 </div>
@@ -71,17 +81,17 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="servicesGrid">
                 
-                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors service-card">
-                    <h3 class="text-xl font-bold text-cyan-400 mb-6 border-b border-slate-800 pb-4">Lead Generation</h3>
-                    <ul class="space-y-4 text-slate-300">
+                <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors service-card">
+                    <h3 class="text-xl font-bold text-cyan-600 dark:text-cyan-400 mb-6 border-b border-slate-200 dark:border-slate-800 pb-4">Lead Generation</h3>
+                    <ul class="space-y-4 text-slate-700 dark:text-slate-300">
                         <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> B2B Calling Data</li>
                         <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> B2B Lead Generation</li>
                     </ul>
                 </div>
 
-                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors service-card">
-                    <h3 class="text-xl font-bold text-cyan-400 mb-6 border-b border-slate-800 pb-4">Sessions</h3>
-                    <ul class="space-y-4 text-slate-300">
+                <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors service-card">
+                    <h3 class="text-xl font-bold text-cyan-600 dark:text-cyan-400 mb-6 border-b border-slate-200 dark:border-slate-800 pb-4">Sessions</h3>
+                    <ul class="space-y-4 text-slate-700 dark:text-slate-300">
                         <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Training of Sales</li>
                         <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Sales Enhancement</li>
                         <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Motivational</li>
@@ -90,9 +100,9 @@
                     </ul>
                 </div>
 
-                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors service-card">
-                    <h3 class="text-xl font-bold text-cyan-400 mb-6 border-b border-slate-800 pb-4">Services</h3>
-                    <ul class="space-y-4 text-slate-300">
+                <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors service-card">
+                    <h3 class="text-xl font-bold text-cyan-600 dark:text-cyan-400 mb-6 border-b border-slate-200 dark:border-slate-800 pb-4">Services</h3>
+                    <ul class="space-y-4 text-slate-700 dark:text-slate-300">
                         <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> HRMS Consultant</li>
                         <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Dealership</li>
                         <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Hiring Consultant</li>
@@ -102,9 +112,9 @@
                     </ul>
                 </div>
 
-                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors service-card">
-                    <h3 class="text-xl font-bold text-cyan-400 mb-6 border-b border-slate-800 pb-4">Products</h3>
-                    <ul class="space-y-4 text-slate-300">
+                <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors service-card">
+                    <h3 class="text-xl font-bold text-cyan-600 dark:text-cyan-400 mb-6 border-b border-slate-200 dark:border-slate-800 pb-4">Products</h3>
+                    <ul class="space-y-4 text-slate-700 dark:text-slate-300">
                         <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Sales & Purchase Raw Material</li>
                         <li class="service-item flex items-start gap-3"><span class="text-emerald-500">▹</span> Promotions</li>
                     </ul>
@@ -115,49 +125,49 @@
     </section>
 
     <section id="about" class="py-24 max-w-5xl mx-auto px-6">
-        <div class="p-8 md:p-12 rounded-3xl bg-gradient-to-r from-slate-900 to-indigo-950/40 border border-slate-800 relative overflow-hidden">
+        <div class="p-8 md:p-12 rounded-3xl bg-gradient-to-r from-slate-100 to-indigo-50 dark:from-slate-900 dark:to-indigo-950/40 border border-slate-200 dark:border-slate-800 relative overflow-hidden transition-colors duration-300">
             <div class="relative z-10 max-w-2xl">
-                <h2 class="text-3xl font-bold text-white mb-6">About Nova Pulse</h2>
-                <p class="text-slate-300 leading-relaxed mb-6">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6">About Nova Pulse</h2>
+                <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
                     We break down complex operational hurdles into execution-focused frameworks. From building powerful outbound sales architectures to standardizing modern HR infrastructure, we bring absolute clarity and momentum to growing organizations.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="founder" class="py-24 bg-slate-900 border-t border-slate-800">
+    <section id="founder" class="py-24 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/3 flex justify-center">
-                <div class="relative w-64 h-64 rounded-full overflow-hidden border-4 border-cyan-500/30 shadow-2xl shadow-cyan-500/20">
+                <div class="relative w-64 h-64 rounded-full overflow-hidden border-4 border-cyan-200 dark:border-cyan-500/30 shadow-2xl shadow-cyan-500/20">
                 <img src="founder.jpg" alt="Yatender Singh" class="w-full h-full object-cover">
                 </div>
             </div>
             
             <div class="w-full md:w-2/3 text-center md:text-left">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Yatender Singh</h2>
-                <h3 class="text-xl text-cyan-400 font-semibold mb-6">Founder & Head of Sales</h3>
-                <p class="text-slate-300 leading-relaxed mb-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-2">Yatender Singh</h2>
+                <h3 class="text-xl text-cyan-600 dark:text-cyan-400 font-semibold mb-6">Founder & Head of Sales</h3>
+                <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
                 With extensive expertise in B2B SaaS, GTM strategy, and sales operations, Yatender specializes in driving revenue growth and building high-performance outbound teams. Currently driving sales execution at Human Maximizer, he brings a deep understanding of HR tech and accountability-first platforms directly to Nova Pulse. 
                 </p>
-                <p class="text-slate-400 leading-relaxed mb-8">
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
                 An alumnus of Maharaja Agrasen Business School, Yatender breaks down complex operational hurdles into aggressive, execution-focused frameworks that actually scale.
                 </p>
                 <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                <span class="px-4 py-2 rounded-full bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">B2B SaaS</span>
-                <span class="px-4 py-2 rounded-full bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">GTM Strategy</span>
-                <span class="px-4 py-2 rounded-full bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">Lead Generation</span>
-                <span class="px-4 py-2 rounded-full bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">Sales Operations</span>
+                <span class="px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium border border-slate-300 dark:border-slate-700">B2B SaaS</span>
+                <span class="px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium border border-slate-300 dark:border-slate-700">GTM Strategy</span>
+                <span class="px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium border border-slate-300 dark:border-slate-700">Lead Generation</span>
+                <span class="px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium border border-slate-300 dark:border-slate-700">Sales Operations</span>
                 </div>
             </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 border-t border-slate-800 bg-slate-950">
+    <section id="contact" class="py-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Let's Build Something Great</h2>
-            <p class="text-slate-400 mb-10 max-w-md mx-auto">Connect with us instantly via WhatsApp, email, or professional networks.</p>
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Let's Build Something Great</h2>
+            <p class="text-slate-600 dark:text-slate-400 mb-10 max-w-md mx-auto">Connect with us instantly via WhatsApp, email, or professional networks.</p>
             
             <div class="flex flex-wrap justify-center gap-6">
             <a href="https://wa.me/+918796623604" target="_blank" class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-all">
@@ -168,35 +178,35 @@
                 <i class="fa-solid fa-envelope text-xl"></i> Email Us
             </a>
 
-            <a href="https://www.linkedin.com/in/yatender-singh-13a557409/" target="_blank" class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-750 text-slate-200 font-semibold border border-slate-700 transition-all">
+            <a href="https://www.linkedin.com/in/yatender-singh-13a557409/" target="_blank" class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-750 text-slate-800 dark:text-slate-200 font-semibold border border-slate-300 dark:border-slate-700 transition-all">
                 <i class="fa-brands fa-linkedin text-xl"></i> LinkedIn
             </a>
             </div>
             
-            <p class="text-xs text-slate-600 mt-16">&copy; 2026 Nova Pulse. All rights reserved.</p>
+            <p class="text-xs text-slate-500 dark:text-slate-600 mt-16">&copy; 2026 Nova Pulse. All rights reserved.</p>
         </div>
     </section>
 
-    <div id="expertModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex justify-center items-center p-4">
-        <div class="bg-slate-900 w-full max-w-md rounded-2xl border border-slate-700 shadow-2xl relative">
-            <button onclick="toggleModal('expertModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+    <div id="expertModal" class="fixed inset-0 z-50 hidden bg-slate-900/40 dark:bg-slate-950/80 backdrop-blur-sm flex justify-center items-center p-4">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-md rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xl relative transition-colors duration-300">
+            <button onclick="toggleModal('expertModal')" class="absolute top-4 right-4 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             
             <div class="p-8">
-                <h3 class="text-2xl font-bold text-white mb-6">Ask an Expert</h3>
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Ask an Expert</h3>
                 <form id="expertForm" onsubmit="submitToWhatsApp(event)" class="space-y-4">
                     <div>
-                        <label class="block text-sm text-slate-400 mb-1">Full Name</label>
-                        <input type="text" id="expName" required class="w-full bg-slate-950 border border-slate-700 text-slate-200 rounded-lg py-2 px-4 focus:outline-none focus:border-cyan-500">
+                        <label class="block text-sm text-slate-600 dark:text-slate-400 mb-1">Full Name</label>
+                        <input type="text" id="expName" required class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-slate-200 rounded-lg py-2 px-4 focus:outline-none focus:border-cyan-500">
                     </div>
                     <div>
-                        <label class="block text-sm text-slate-400 mb-1">Contact Number</label>
-                        <input type="tel" id="expPhone" required class="w-full bg-slate-950 border border-slate-700 text-slate-200 rounded-lg py-2 px-4 focus:outline-none focus:border-cyan-500">
+                        <label class="block text-sm text-slate-600 dark:text-slate-400 mb-1">Contact Number</label>
+                        <input type="tel" id="expPhone" required class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-slate-200 rounded-lg py-2 px-4 focus:outline-none focus:border-cyan-500">
                     </div>
                     <div>
-                        <label class="block text-sm text-slate-400 mb-1">Service Required</label>
-                        <select id="expService" required class="w-full bg-slate-950 border border-slate-700 text-slate-200 rounded-lg py-2 px-4 focus:outline-none focus:border-cyan-500 appearance-none">
+                        <label class="block text-sm text-slate-600 dark:text-slate-400 mb-1">Service Required</label>
+                        <select id="expService" required class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-slate-200 rounded-lg py-2 px-4 focus:outline-none focus:border-cyan-500 appearance-none">
                             <option value="">Select a service...</option>
                             <option value="Lead Generation">Lead Generation</option>
                             <option value="Training/Sessions">Training / Sessions</option>
@@ -206,8 +216,8 @@
                         </select>
                     </div>
                     <div>
-                        <label class="block text-sm text-slate-400 mb-1">City / Address</label>
-                        <input type="text" id="expAddress" required class="w-full bg-slate-950 border border-slate-700 text-slate-200 rounded-lg py-2 px-4 focus:outline-none focus:border-cyan-500">
+                        <label class="block text-sm text-slate-600 dark:text-slate-400 mb-1">City / Address</label>
+                        <input type="text" id="expAddress" required class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-slate-200 rounded-lg py-2 px-4 focus:outline-none focus:border-cyan-500">
                     </div>
                     <button type="submit" class="w-full mt-4 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition-colors">
                         Submit via WhatsApp
@@ -218,6 +228,11 @@
     </div>
 
     <script>
+        // Theme Toggle Functionality
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+        }
+
         // Search Functionality
         function filterServices() {
             let input = document.getElementById('serviceSearch').value.toLowerCase();
