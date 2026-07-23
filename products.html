@@ -46,13 +46,33 @@
                 <button onclick="setCategory('hrms')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">HRMS Tools</button>
                 <button onclick="setCategory('analytics')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Analytics</button>
                 <button onclick="setCategory('accountability')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Accountability</button>
+                <button onclick="setCategory('health')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Health Tech</button>
             </div>
         </div>
 
         <!-- Product Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
             
-            <!-- Card 1 -->
+            <!-- Card 1: Vedapulse (Sponsored) -->
+            <div class="product-card bg-slate-800/50 border border-amber-500/40 rounded-xl p-6 flex flex-col justify-between hover:border-amber-400/80 transition-all relative overflow-hidden" data-category="health">
+                <div class="absolute top-0 right-0 bg-amber-500/20 text-amber-300 text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-bl-lg border-b border-l border-amber-500/30">
+                    Sponsored by Nova Pulse
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-lg flex items-center justify-center text-xl mb-4 mt-2">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Health Tech</span>
+                    <h3 class="text-xl font-bold mt-1 mb-2">Vedapulse</h3>
+                    <p class="text-slate-400 text-sm mb-4">Advanced diagnostic assessment hardware and software providing automated holistic health analysis and reporting.</p>
+                </div>
+                <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between">
+                    <span class="text-xs text-amber-400/80 font-medium">Partner Integration</span>
+                    <button class="text-amber-400 hover:text-amber-300 text-sm font-semibold flex items-center gap-1">Request Demo <i class="fa-solid fa-arrow-right text-xs"></i></button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
             <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition-all" data-category="hrms">
                 <div>
                     <div class="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-lg flex items-center justify-center text-xl mb-4">
@@ -68,7 +88,7 @@
                 </div>
             </div>
 
-            <!-- Card 2 -->
+            <!-- Card 3 -->
             <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition-all" data-category="accountability">
                 <div>
                     <div class="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-lg flex items-center justify-center text-xl mb-4">
@@ -84,7 +104,7 @@
                 </div>
             </div>
 
-            <!-- Card 3 -->
+            <!-- Card 4 -->
             <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition-all" data-category="analytics">
                 <div>
                     <div class="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-lg flex items-center justify-center text-xl mb-4">
