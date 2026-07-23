@@ -3,23 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | Nova Pulse</title>
+    <title>Products | Vedaapulse - Sponsored by Nova Pulse</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3 font-bold text-xl tracking-wide">
-                <img src="Logo.png" alt="Nova Pulse Logo" class="h-20 w-auto object-contain">
-            </a>
+            <!-- Brand Logos Section -->
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="flex items-center gap-2">
+                    <span class="text-2xl font-black tracking-wide text-amber-500">VEDAAPULSE</span>
+                </a>
+                <span class="text-slate-600 text-xl font-light">|</span>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs text-slate-400 uppercase tracking-wider hidden sm:inline">Sponsored by</span>
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="Logo.png" alt="Nova Pulse Logo" class="h-10 w-auto object-contain">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
             <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-                <a href="index.html#services" class="hover:text-cyan-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-briefcase"></i> Services</a>
-                <a href="products.html" class="text-cyan-400 flex items-center gap-2"><i class="fa-solid fa-box-open"></i> Products</a>
-                <a href="index.html#about" class="hover:text-cyan-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-circle-info"></i> About</a>
-                <a href="index.html#contact" class="hover:text-white bg-cyan-600 hover:bg-cyan-500 px-5 py-2.5 rounded-full text-slate-900 font-semibold transition-all">Get in Touch</a>
+                <a href="index.html#services" class="hover:text-amber-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-leaf"></i> Organic Assurance</a>
+                <a href="products.html" class="text-amber-400 flex items-center gap-2"><i class="fa-solid fa-basket-shopping"></i> Products</a>
+                <a href="index.html#about" class="hover:text-amber-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-circle-info"></i> About Us</a>
+                <a href="#cart" class="hover:text-slate-900 bg-amber-500 hover:bg-amber-400 px-5 py-2.5 rounded-full text-slate-900 font-semibold transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart (0)
+                </a>
             </div>
         </div>
     </nav>
@@ -27,8 +41,11 @@
     <!-- Header & Controls Section -->
     <section class="pt-32 pb-12 px-6 max-w-7xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-10">
-            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl mb-4">Our Product Catalog</h1>
-            <p class="text-slate-400">Explore our automated tools and software solutions designed to streamline performance and business workflows.</p>
+            <span class="text-xs uppercase font-bold text-amber-400 tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+                A Division of Nova Pulse Group
+            </span>
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl mt-4 mb-4">Vedaapulse Pure Essentials</h1>
+            <p class="text-slate-400">Authentic, cold-pressed oils, traditional homemade pickles (aachar), and organic kitchen staples crafted for healthy living.</p>
         </div>
 
         <!-- Controls: Search & Category Filters -->
@@ -36,87 +53,106 @@
             <!-- Search Bar -->
             <div class="relative w-full md:w-80">
                 <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search products..." 
-                    class="w-full pl-10 pr-4 py-2.5 bg-slate-800/80 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:border-cyan-500">
+                <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search oils, aachar, spices..." 
+                    class="w-full pl-10 pr-4 py-2.5 bg-slate-800/80 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:border-amber-500">
             </div>
 
             <!-- Category Buttons -->
             <div class="flex flex-wrap gap-2 justify-center" id="categoryButtons">
-                <button onclick="setCategory('all')" class="cat-btn active px-4 py-2 text-sm font-medium rounded-lg bg-cyan-500 text-slate-900 font-semibold transition-all">All</button>
-                <button onclick="setCategory('hrms')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">HRMS Tools</button>
-                <button onclick="setCategory('analytics')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Analytics</button>
-                <button onclick="setCategory('accountability')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Accountability</button>
-                <button onclick="setCategory('health')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Health Tech</button>
+                <button onclick="setCategory('all')" class="cat-btn active px-4 py-2 text-sm font-medium rounded-lg bg-amber-500 text-slate-900 font-semibold transition-all">All Products</button>
+                <button onclick="setCategory('oils')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Cold-Pressed Oils</button>
+                <button onclick="setCategory('aachar')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Traditional Aachar</button>
+                <button onclick="setCategory('essentials')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Organic Essentials</button>
             </div>
         </div>
 
         <!-- Product Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="productGrid">
             
-            <!-- Card 1: Vedapulse (Sponsored) -->
-            <div class="product-card bg-slate-800/50 border border-amber-500/40 rounded-xl p-6 flex flex-col justify-between hover:border-amber-400/80 transition-all relative overflow-hidden" data-category="health">
-                <div class="absolute top-0 right-0 bg-amber-500/20 text-amber-300 text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-bl-lg border-b border-l border-amber-500/30">
-                    Sponsored by Nova Pulse
+            <!-- Product 1: Mustard Oil -->
+            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="oils">
+                <div>
+                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
+                        <i class="fa-solid fa-bottle-droplet"></i>
+                        <span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded border border-amber-500/30">100% Pure</span>
+                    </div>
+                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Cold-Pressed Oils</span>
+                    <h3 class="text-lg font-bold mt-1 mb-1">Cold-Pressed Mustard Oil</h3>
+                    <p class="text-slate-400 text-xs mb-3">Kachi Ghani mustard oil extracted traditionally without heat to retain full aroma and nutrients.</p>
                 </div>
                 <div>
-                    <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-lg flex items-center justify-center text-xl mb-4 mt-2">
-                        <i class="fa-solid fa-heart-pulse"></i>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xl font-extrabold text-white">₹340 <span class="text-xs font-normal text-slate-400">/ 1 Litre</span></span>
+                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.9</div>
                     </div>
-                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Health Tech</span>
-                    <h3 class="text-xl font-bold mt-1 mb-2">Vedapulse</h3>
-                    <p class="text-slate-400 text-sm mb-4">Advanced diagnostic assessment hardware and software providing automated holistic health analysis and reporting.</p>
-                </div>
-                <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between">
-                    <span class="text-xs text-amber-400/80 font-medium">Partner Integration</span>
-                    <button class="text-amber-400 hover:text-amber-300 text-sm font-semibold flex items-center gap-1">Request Demo <i class="fa-solid fa-arrow-right text-xs"></i></button>
+                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                    </button>
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition-all" data-category="hrms">
+            <!-- Product 2: Mango Aachar -->
+            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="aachar">
                 <div>
-                    <div class="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-lg flex items-center justify-center text-xl mb-4">
-                        <i class="fa-solid fa-users"></i>
+                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
+                        <i class="fa-solid fa-jar"></i>
+                        <span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded border border-amber-500/30">Homemade Recipe</span>
                     </div>
-                    <span class="text-xs uppercase font-semibold text-cyan-400 tracking-wider">HRMS Tools</span>
-                    <h3 class="text-xl font-bold mt-1 mb-2">Human Maximizer Core</h3>
-                    <p class="text-slate-400 text-sm mb-4">Complete employee tracking, attendance automation, and workflow manager built for hybrid teams.</p>
+                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Traditional Aachar</span>
+                    <h3 class="text-lg font-bold mt-1 mb-1">Mango Aachar (Aam Ka Aachar)</h3>
+                    <p class="text-slate-400 text-xs mb-3">Traditional sun-dried raw mango pickle infused with authentic aromatic spices and mustard oil.</p>
                 </div>
-                <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between">
-                    <span class="text-xs text-slate-400">Enterprise Ready</span>
-                    <button class="text-cyan-400 hover:text-cyan-300 text-sm font-semibold flex items-center gap-1">Request Demo <i class="fa-solid fa-arrow-right text-xs"></i></button>
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xl font-extrabold text-white">₹220 <span class="text-xs font-normal text-slate-400">/ 500g</span></span>
+                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.8</div>
+                    </div>
+                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                    </button>
                 </div>
             </div>
 
-            <!-- Card 3 -->
-            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition-all" data-category="accountability">
+            <!-- Product 3: Coconut Oil -->
+            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="oils">
                 <div>
-                    <div class="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-lg flex items-center justify-center text-xl mb-4">
-                        <i class="fa-solid fa-list-check"></i>
+                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
+                        <i class="fa-solid fa-droplet"></i>
                     </div>
-                    <span class="text-xs uppercase font-semibold text-cyan-400 tracking-wider">Accountability</span>
-                    <h3 class="text-xl font-bold mt-1 mb-2">Pulse Tracker</h3>
-                    <p class="text-slate-400 text-sm mb-4">Real-time productivity monitoring, task completion metrics, and daily goal verification engines.</p>
+                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Cold-Pressed Oils</span>
+                    <h3 class="text-lg font-bold mt-1 mb-1">Virgin Coconut Oil</h3>
+                    <p class="text-slate-400 text-xs mb-3">Raw, unrefined extra virgin coconut oil pressed from fresh coconuts for cooking and wellness.</p>
                 </div>
-                <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between">
-                    <span class="text-xs text-slate-400">SaaS Module</span>
-                    <button class="text-cyan-400 hover:text-cyan-300 text-sm font-semibold flex items-center gap-1">Request Demo <i class="fa-solid fa-arrow-right text-xs"></i></button>
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xl font-extrabold text-white">₹450 <span class="text-xs font-normal text-slate-400">/ 500ml</span></span>
+                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 5.0</div>
+                    </div>
+                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                    </button>
                 </div>
             </div>
 
-            <!-- Card 4 -->
-            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition-all" data-category="analytics">
+            <!-- Product 4: A2 Desi Ghee -->
+            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="essentials">
                 <div>
-                    <div class="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-lg flex items-center justify-center text-xl mb-4">
-                        <i class="fa-solid fa-chart-line"></i>
+                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
+                        <i class="fa-solid fa-bowl-food"></i>
+                        <span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded border border-amber-500/30">Bilona Method</span>
                     </div>
-                    <span class="text-xs uppercase font-semibold text-cyan-400 tracking-wider">Analytics</span>
-                    <h3 class="text-xl font-bold mt-1 mb-2">Performance AI</h3>
-                    <p class="text-slate-400 text-sm mb-4">Automated reporting engine generating actionable insights from operational data.</p>
+                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Organic Essentials</span>
+                    <h3 class="text-lg font-bold mt-1 mb-1">Organic A2 Desi Ghee</h3>
+                    <p class="text-slate-400 text-xs mb-3">Pure cultured A2 Gir cow ghee churned using traditional Bilona process for high nutrient density.</p>
                 </div>
-                <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between">
-                    <span class="text-xs text-slate-400">Add-on</span>
-                    <button class="text-cyan-400 hover:text-cyan-300 text-sm font-semibold flex items-center gap-1">Request Demo <i class="fa-solid fa-arrow-right text-xs"></i></button>
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xl font-extrabold text-white">₹890 <span class="text-xs font-normal text-slate-400">/ 500ml</span></span>
+                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.9</div>
+                    </div>
+                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -134,7 +170,7 @@
             document.querySelectorAll('.cat-btn').forEach(btn => {
                 btn.className = 'cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all';
             });
-            event.target.className = 'cat-btn active px-4 py-2 text-sm font-semibold rounded-lg bg-cyan-500 text-slate-900 transition-all';
+            event.target.className = 'cat-btn active px-4 py-2 text-sm font-semibold rounded-lg bg-amber-500 text-slate-900 transition-all';
 
             filterProducts();
         }
