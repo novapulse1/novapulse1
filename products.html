@@ -18,9 +18,7 @@
                 <a href="index.html" class="flex items-center gap-2">
                     <img src="Vedaapulse-Logo.png" alt="Vedaapulse Logo" class="h-12 w-auto object-contain">
                 </a>
-                
                 <span class="text-slate-700 text-xl font-light">/</span>
-                
                 <!-- Nova Pulse Sponsorship Logo & Badge -->
                 <div class="flex items-center gap-2 bg-slate-800/80 border border-slate-700/60 px-3 py-1 rounded-full shadow-sm">
                     <span class="text-xs font-serif italic text-amber-400/90 tracking-wide">Sponsored By</span>
@@ -49,7 +47,7 @@
                 A Division of Nova Pulse Group
             </span>
             <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl mt-4 mb-4">Vedaapulse Pure Essentials</h1>
-            <p class="text-slate-400">Authentic, cold-pressed oils, traditional homemade pickles (aachar), and organic kitchen staples crafted for healthy living.</p>
+            <p class="text-slate-400">Authentic cold-pressed oils, traditional homemade pickles, premium dry fruits, and organic kitchen staples crafted for healthy living.</p>
         </div>
 
         <!-- Controls: Search & Category Filters -->
@@ -57,15 +55,15 @@
             <!-- Search Bar -->
             <div class="relative w-full md:w-80">
                 <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search oils, aachar, spices..." 
-                    class="w-full pl-10 pr-4 py-2.5 bg-slate-800/80 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:border-amber-500">
+                <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search oils, dry fruits, spices..." class="w-full pl-10 pr-4 py-2.5 bg-slate-800/80 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:border-amber-500">
             </div>
 
             <!-- Category Buttons -->
             <div class="flex flex-wrap gap-2 justify-center" id="categoryButtons">
-                <button onclick="setCategory('all')" class="cat-btn active px-4 py-2 text-sm font-medium rounded-lg bg-amber-500 text-slate-900 font-semibold transition-all">All Products</button>
+                <button onclick="setCategory('all')" class="cat-btn active px-4 py-2 text-sm font-semibold rounded-lg bg-amber-500 text-slate-900 transition-all">All Products</button>
                 <button onclick="setCategory('oils')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Cold-Pressed Oils</button>
                 <button onclick="setCategory('aachar')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Traditional Aachar</button>
+                <button onclick="setCategory('dry-fruits')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Dry Fruits & Nuts</button>
                 <button onclick="setCategory('essentials')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Organic Essentials</button>
             </div>
         </div>
@@ -153,6 +151,115 @@
                     <div class="flex items-center justify-between mb-3">
                         <span class="text-xl font-extrabold text-white">₹890 <span class="text-xs font-normal text-slate-400">/ 500ml</span></span>
                         <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.9</div>
+                    </div>
+                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 5: Premium Almonds -->
+            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="dry-fruits">
+                <div>
+                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
+                        <i class="fa-solid fa-seedling"></i>
+                        <span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded border border-amber-500/30">Raw & Crunchy</span>
+                    </div>
+                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Dry Fruits & Nuts</span>
+                    <h3 class="text-lg font-bold mt-1 mb-1">California Almonds (Badam)</h3>
+                    <p class="text-slate-400 text-xs mb-3">Handpicked premium quality unroasted almonds rich in protein, vitamin E, and fiber.</p>
+                </div>
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xl font-extrabold text-white">₹520 <span class="text-xs font-normal text-slate-400">/ 500g</span></span>
+                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.9</div>
+                    </div>
+                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 6: Seeds Mix -->
+            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="dry-fruits">
+                <div>
+                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
+                        <i class="fa-solid fa-plant-wilt"></i>
+                        <span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded border border-amber-500/30">Superfood Mix</span>
+                    </div>
+                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Dry Fruits & Nuts</span>
+                    <h3 class="text-lg font-bold mt-1 mb-1">7-in-1 Roasted Seeds Mix</h3>
+                    <p class="text-slate-400 text-xs mb-3">Nutritious blend of pumpkin, chia, flax, sunflower, watermelon, sesame, and muskmelon seeds.</p>
+                </div>
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xl font-extrabold text-white">₹280 <span class="text-xs font-normal text-slate-400">/ 250g</span></span>
+                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.8</div>
+                    </div>
+                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 7: Kismis -->
+            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="dry-fruits">
+                <div>
+                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
+                        <i class="fa-solid fa-wheat-awn"></i>
+                    </div>
+                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Dry Fruits & Nuts</span>
+                    <h3 class="text-lg font-bold mt-1 mb-1">Golden Raisins (Kismis)</h3>
+                    <p class="text-slate-400 text-xs mb-3">Naturally dried sweet golden raisins packed with iron, potassium, and quick natural energy.</p>
+                </div>
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xl font-extrabold text-white">₹190 <span class="text-xs font-normal text-slate-400">/ 250g</span></span>
+                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.7</div>
+                    </div>
+                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 8: Walnut Kernels -->
+            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="dry-fruits">
+                <div>
+                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
+                        <i class="fa-solid fa-brain"></i>
+                        <span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded border border-amber-500/30">Omega-3 Rich</span>
+                    </div>
+                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Dry Fruits & Nuts</span>
+                    <h3 class="text-lg font-bold mt-1 mb-1">Chilean Walnut Kernels (Akhrot)</h3>
+                    <p class="text-slate-400 text-xs mb-3">Extra-light, crunchy halved walnuts loaded with Omega-3 fatty acids for brain health.</p>
+                </div>
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xl font-extrabold text-white">₹640 <span class="text-xs font-normal text-slate-400">/ 500g</span></span>
+                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.9</div>
+                    </div>
+                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 9: Dates -->
+            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="dry-fruits">
+                <div>
+                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
+                        <i class="fa-solid fa-cookie"></i>
+                        <span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded border border-amber-500/30">No Added Sugar</span>
+                    </div>
+                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Dry Fruits & Nuts</span>
+                    <h3 class="text-lg font-bold mt-1 mb-1">Premium Kimia Dates (Khajoor)</h3>
+                    <p class="text-slate-400 text-xs mb-3">Soft, moist, naturally sweet fresh dates sourced directly to retain full nutritional value.</p>
+                </div>
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xl font-extrabold text-white">₹310 <span class="text-xs font-normal text-slate-400">/ 500g</span></span>
+                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.8</div>
                     </div>
                     <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
                         <i class="fa-solid fa-cart-plus"></i> Add to Cart
