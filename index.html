@@ -626,7 +626,7 @@
                 <div class="flex flex-col sm:flex-row w-full md:w-auto gap-4">
                     <div class="relative w-full sm:w-64">
                         <input type="text" id="serviceSearch" onkeyup="filterServices()" placeholder="Search services..." class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-3 pl-4 pr-10 focus:outline-none focus:border-brand-700 transition-colors">
-                        <svg class="w-5 h-5 text-slate-400 absolute right-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        <svg class="w-5 h-5 text-slate-400 absolute right-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 0 0114 0z"></path></svg>
                     </div>
                     <button onclick="openDemoModal('General Inquiry')" class="px-6 py-3 rounded-xl bg-brand-800 hover:bg-brand-900 text-white font-semibold transition-all whitespace-nowrap shadow-lg shadow-brand-900/20">
                         <i class="fa-solid fa-headset mr-2"></i> Ask an Expert
@@ -933,43 +933,43 @@
                     <p class="text-xs text-slate-500 mt-1">Fill in your details below. Our team will review your requirements and schedule a personalized demo session.</p>
                 </div>
 
-                <form id="expertForm" onsubmit="handleDemoSubmission(event)" class="space-y-4">
+                <form id="expertForm" action="https://formspree.io/f/mlgqzgyp" method="POST" onsubmit="handleDemoSubmission(event)" class="space-y-4">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1">Customer Name <span class="text-red-500">*</span></label>
-                            <input type="text" id="expName" required placeholder="e.g., John Doe" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
+                            <input type="text" id="expName" name="Name" required placeholder="e.g., John Doe" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1">Contact Number <span class="text-red-500">*</span></label>
-                            <input type="tel" id="expPhone" required placeholder="e.g., +91 98765 43210" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
+                            <input type="tel" id="expPhone" name="Phone" required placeholder="e.g., +91 98765 43210" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1">Company Name <span class="text-red-500">*</span></label>
-                            <input type="text" id="expCompany" required placeholder="e.g., Acme Corp" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
+                            <input type="text" id="expCompany" name="Company" required placeholder="e.g., Acme Corp" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1">Industry <span class="text-red-500">*</span></label>
-                            <input type="text" id="expIndustry" required placeholder="e.g., Healthcare, SaaS, Retail" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
+                            <input type="text" id="expIndustry" name="Industry" required placeholder="e.g., Healthcare, SaaS, Retail" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1">Official Email Address <span class="text-red-500">*</span></label>
-                            <input type="email" id="expEmail" required placeholder="name@company.com" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
+                            <input type="email" id="expEmail" name="Email" required placeholder="name@company.com" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1">State / Location <span class="text-red-500">*</span></label>
-                            <input type="text" id="expState" required placeholder="e.g., Delhi, Maharashtra" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
+                            <input type="text" id="expState" name="Location" required placeholder="e.g., Delhi, Maharashtra" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
                         </div>
                     </div>
 
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1">Service Required <span class="text-red-500">*</span></label>
-                        <select id="expService" required onchange="handleServiceChange(this)" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
+                        <select id="expService" name="Service" required onchange="handleServiceChange(this)" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
                             <option value="">Select a service...</option>
                             <option value="Lead Generation">Lead Generation</option>
                             <option value="Training & Sessions">Training & Sessions</option>
@@ -982,15 +982,15 @@
 
                     <div id="otherServiceContainer" class="hidden">
                         <label class="block text-xs font-semibold text-slate-700 mb-1">Specify Other Service <span class="text-red-500">*</span></label>
-                        <input type="text" id="expOtherService" placeholder="Please describe the service required" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
+                        <input type="text" id="expOtherService" name="Other_Service" placeholder="Please describe the service required" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700">
                     </div>
 
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1">Additional Information / Remarks</label>
-                        <textarea id="expRemarks" rows="3" placeholder="Tell us more about your requirements or preferred time..." class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700"></textarea>
+                        <textarea id="expRemarks" name="Remarks" rows="3" placeholder="Tell us more about your requirements or preferred time..." class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-2.5 px-3.5 text-sm focus:outline-none focus:border-brand-700"></textarea>
                     </div>
 
-                    <button type="submit" class="w-full mt-2 py-3.5 rounded-xl bg-brand-800 hover:bg-brand-900 text-white font-bold transition-all shadow-md shadow-brand-900/20">
+                    <button type="submit" id="submitBtn" class="w-full mt-2 py-3.5 rounded-xl bg-brand-800 hover:bg-brand-900 text-white font-bold transition-all shadow-md shadow-brand-900/20">
                         Submit & Request Demo
                     </button>
                 </form>
@@ -1059,43 +1059,41 @@
             }
         }
 
-        function handleDemoSubmission(e) {
+        async function handleDemoSubmission(e) {
             e.preventDefault(); 
             
-            let name = document.getElementById('expName').value;
-            let phone = document.getElementById('expPhone').value;
-            let company = document.getElementById('expCompany').value;
-            let industry = document.getElementById('expIndustry').value;
-            let email = document.getElementById('expEmail').value;
-            let state = document.getElementById('expState').value;
-            let service = document.getElementById('expService').value;
-            let otherService = document.getElementById('expOtherService').value;
-            let remarks = document.getElementById('expRemarks').value;
-
-            let finalService = (service === 'Other') ? `Other (${otherService})` : service;
+            let form = e.target;
+            let submitBtn = document.getElementById('submitBtn');
+            let originalBtnText = submitBtn.innerText;
             
-            let message = `*New Demo & Service Request - Nova Pulse*\n\n` +
-                          `*Customer Name:* ${name}\n` +
-                          `*Contact No:* ${phone}\n` +
-                          `*Official Email:* ${email}\n` +
-                          `*Company Name:* ${company}\n` +
-                          `*Industry:* ${industry}\n` +
-                          `*State/Location:* ${state}\n` +
-                          `*Service Required:* ${finalService}\n` +
-                          `*Remarks/Info:* ${remarks || 'N/A'}`;
+            submitBtn.innerText = "Sending...";
+            submitBtn.disabled = true;
 
-            let encodedMessage = encodeURIComponent(message);
-            let waNumber = "918796623604"; 
-            
-            // Deliver details via active WhatsApp/Mobile Dispatch channel
-            window.open(`https://wa.me/${waNumber}?text=${encodedMessage}`, '_blank');
-            
-            // Deliver instant confirmation to client on behalf of Nova Pulse
-            alert(`Thank you for raising a query, ${name}!\n\nYour request has been registered with Nova Pulse. A confirmation message and email have been dispatched, and our team will connect with you shortly.`);
+            let formData = new FormData(form);
 
-            toggleModal('expertModal');
-            document.getElementById('expertForm').reset();
-            document.getElementById('otherServiceContainer').classList.add('hidden');
+            try {
+                let response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    alert(`Thank you for raising a query, ${formData.get('Name')}!\n\nYour demo request has been submitted successfully. Details have been emailed to novapulse739@gmail.com.`);
+                    form.reset();
+                    document.getElementById('otherServiceContainer').classList.add('hidden');
+                    toggleModal('expertModal');
+                } else {
+                    alert('There was a problem submitting your form. Please try again.');
+                }
+            } catch (error) {
+                alert('Oops! There was a problem submitting your form. Please check your internet connection.');
+            } finally {
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            }
         }
     </script>
 
