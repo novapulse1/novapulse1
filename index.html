@@ -717,35 +717,114 @@
         </div>
     </section>
 
-    <!-- FOUNDER SECTION -->
+    <!-- MEET OUR FOUNDERS SECTION -->
     <section id="founder" class="py-24 bg-slate-50 border-t border-slate-200">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="w-full md:w-1/3 flex justify-center">
-                    <div class="relative w-64 h-64 rounded-full overflow-hidden border-4 border-brand-800/30 shadow-xl shadow-brand-900/10">
-                        <img src="founder.jpeg" alt="Yatender Singh" class="w-full h-full object-cover">
-                    </div>
-                </div>
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-brand-800 uppercase">Leadership</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-2">Meet Our Founders</h2>
+                <p class="text-slate-600 mt-4">The driving force behind Nova Pulse, combining strategic operational vision and aggressive sales execution.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
                 
-                <div class="w-full md:w-2/3 text-center md:text-left">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-2">Yatender Singh</h2>
-                    <h3 class="text-xl text-brand-800 font-semibold mb-6">Founder & Head of Sales</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        With extensive expertise in B2B SaaS, GTM strategy, and sales operations, Yatender specializes in driving revenue growth and building high-performance outbound teams. Currently driving sales execution at Human Maximizer, he brings a deep understanding of HR tech and accountability-first platforms directly to Nova Pulse. 
-                    </p>
-                    <p class="text-slate-500 leading-relaxed mb-8">
-                        An alumnus of Maharaja Agrasen Business School, Yatender breaks down complex operational hurdles into aggressive, execution-focused frameworks that actually scale.
-                    </p>
-                    <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                        <span class="px-4 py-2 rounded-full bg-white text-slate-700 text-sm font-medium border border-slate-200 shadow-sm">B2B SaaS</span>
-                        <span class="px-4 py-2 rounded-full bg-white text-slate-700 text-sm font-medium border border-slate-200 shadow-sm">GTM Strategy</span>
-                        <span class="px-4 py-2 rounded-full bg-white text-slate-700 text-sm font-medium border border-slate-200 shadow-sm">Lead Generation</span>
-                        <span class="px-4 py-2 rounded-full bg-white text-slate-700 text-sm font-medium border border-slate-200 shadow-sm">Sales Operations</span>
+                <!-- Founder 1: Anshu Kumari -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg hover:border-brand-400 transition-all flex flex-col items-center text-center">
+                    <div class="relative w-48 h-48 rounded-2xl overflow-hidden border-4 border-brand-800/20 shadow-md mb-6">
+                        <img src="anshu.jpg" alt="Anshu Kumari" class="w-full h-full object-cover">
                     </div>
+                    <h3 class="text-2xl font-bold text-slate-900">Anshu Kumari</h3>
+                    <p class="text-brand-800 font-semibold text-sm mb-4">Founder & CEO</p>
+                    
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-brand-50 text-brand-900 text-xs font-bold border border-brand-200 mb-6">
+                        8+ Years Experience
+                    </span>
+                    
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
+                        Leading strategic growth, brand vision, and digital operations. Anshu drives organizational excellence with a clear focus on empowering business expansion.
+                    </p>
+
+                    <button onclick="openFounderModal('anshuModal')" class="w-full py-3 rounded-xl bg-brand-800 hover:bg-brand-900 text-white font-bold transition-all shadow-md">
+                        Read Story
+                    </button>
                 </div>
+
+                <!-- Founder 2: Yatendra Singh -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg hover:border-brand-400 transition-all flex flex-col items-center text-center">
+                    <div class="relative w-48 h-48 rounded-2xl overflow-hidden border-4 border-brand-800/20 shadow-md mb-6">
+                        <img src="founder.jpeg" alt="Yatendra Singh" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">Yatendra Singh</h3>
+                    <p class="text-brand-800 font-semibold text-sm mb-4">Co-Founder & COO</p>
+                    
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-brand-50 text-brand-900 text-xs font-bold border border-brand-200 mb-6">
+                        10+ Years Experience
+                    </span>
+                    
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
+                        Specializing in B2B SaaS, GTM strategy, and outbound sales operations. Yatender focuses on building high-performance sales architectures and execution models.
+                    </p>
+
+                    <button onclick="openFounderModal('yatendraModal')" class="w-full py-3 rounded-xl bg-brand-800 hover:bg-brand-900 text-white font-bold transition-all shadow-md">
+                        Read Story
+                    </button>
+                </div>
+
             </div>
         </div>
     </section>
+
+    <!-- FOUNDER STORY MODAL - ANSHU KUMARI -->
+    <div id="anshuModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex justify-center items-center p-4 overflow-y-auto">
+        <div class="bg-white w-full max-w-xl rounded-3xl border border-slate-200 shadow-2xl relative text-slate-800 my-8 p-8 md:p-10">
+            <button onclick="closeFounderModal('anshuModal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 bg-slate-100 rounded-full p-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="flex items-center gap-4 mb-6">
+                <img src="anshu.jpg" alt="Anshu Kumari" class="w-20 h-20 rounded-2xl object-cover border-2 border-brand-800/30">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900">Anshu Kumari</h3>
+                    <p class="text-brand-800 font-semibold text-sm">Founder & CEO</p>
+                    <span class="text-xs text-slate-500">8+ Years Industry Expertise</span>
+                </div>
+            </div>
+            <p class="text-slate-600 leading-relaxed text-sm mb-4">
+                Anshu Kumari brings over 8 years of executive expertise leading cross-functional teams, driving operational efficiency, and scaling business development frameworks across various industry sectors.
+            </p>
+            <p class="text-slate-600 leading-relaxed text-sm mb-6">
+                At Nova Pulse, she oversees business operations, strategic partnerships, and enterprise client relations, ensuring every solution delivered creates measurable impact and sustainable momentum.
+            </p>
+            <button onclick="closeFounderModal('anshuModal')" class="w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-xl transition-colors">
+                Close Story
+            </button>
+        </div>
+    </div>
+
+    <!-- FOUNDER STORY MODAL - YATENDRA SINGH -->
+    <div id="yatendraModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex justify-center items-center p-4 overflow-y-auto">
+        <div class="bg-white w-full max-w-xl rounded-3xl border border-slate-200 shadow-2xl relative text-slate-800 my-8 p-8 md:p-10">
+            <button onclick="closeFounderModal('yatendraModal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 bg-slate-100 rounded-full p-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="flex items-center gap-4 mb-6">
+                <img src="founder.jpeg" alt="Yatender Singh" class="w-20 h-20 rounded-2xl object-cover border-2 border-brand-800/30">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900">Yatendra Singh</h3>
+                    <p class="text-brand-800 font-semibold text-sm">Co-Founder & COO</p>
+                    <span class="text-xs text-slate-500">10+ Years Industry Expertise</span>
+                </div>
+            </div>
+            <p class="text-slate-600 leading-relaxed text-sm mb-4">
+                With over a decade of hands-on expertise in B2B SaaS, GTM strategy, and sales operations, Yatender specializes in driving revenue growth and assembling high-performance outbound teams.
+            </p>
+            <p class="text-slate-600 leading-relaxed text-sm mb-6">
+                Currently driving sales execution at Human Maximizer, he brings a deep understanding of HR tech and accountability-first platforms directly into Nova Pulse's strategic consulting services. An alumnus of Maharaja Agrasen Business School, he focuses on converting complex operational hurdles into execution-focused frameworks.
+            </p>
+            <button onclick="closeFounderModal('yatendraModal')" class="w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-xl transition-colors">
+                Close Story
+            </button>
+        </div>
+    </div>
 
     <!-- OUR CLIENTS TICKER -->
     <section id="clients" class="py-16 bg-white border-t border-slate-200 overflow-hidden">
@@ -948,6 +1027,14 @@
         function toggleModal(modalID) {
             let modal = document.getElementById(modalID);
             modal.classList.toggle('hidden');
+        }
+
+        function openFounderModal(modalID) {
+            document.getElementById(modalID).classList.remove('hidden');
+        }
+
+        function closeFounderModal(modalID) {
+            document.getElementById(modalID).classList.add('hidden');
         }
 
         function openDemoModal(serviceName) {
