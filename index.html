@@ -926,7 +926,7 @@
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             <div class="flex items-center gap-4 mb-6">
-                <img src="anshu.jpg" alt="Anshu Kumari" class="w-20 h-20 rounded-2xl object-cover border-2 border-brand-800/30">
+                <img src="anshu.png" alt="Anshu Kumari" class="w-20 h-20 rounded-2xl object-cover border-2 border-brand-800/30">
                 <div>
                     <h3 class="text-2xl font-bold text-slate-900">Anshu Kumari</h3>
                     <p class="text-brand-800 font-semibold text-sm">Founder & CEO</p>
@@ -1040,28 +1040,51 @@
                 </a>
             </div>
 
-            <!-- DISPLAY CONTACT DETAILS & OFFICE ADDRESS IN TEXT FORMAT -->
-            <div class="max-w-2xl mx-auto pt-8 border-t border-slate-800/80 grid grid-cols-1 md:grid-cols-3 gap-6 text-slate-300 text-sm">
-                <!-- Phone Number -->
-                <div class="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 flex flex-col items-center">
-                    <i class="fa-solid fa-phone text-brand-400 text-xl mb-2"></i>
-                    <span class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-1">Contact Number</span>
-                    <p class="font-medium text-slate-200">+91 87966 23604</p>
+            <!-- CONTACT DETAILS & OFFICE ADDRESSES -->
+            <div class="max-w-4xl mx-auto pt-8 border-t border-slate-800/80 space-y-6 text-slate-300 text-sm">
+                
+                <!-- Phone & Email Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                    <!-- Phone Number -->
+                    <div class="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 flex flex-col items-center">
+                        <i class="fa-solid fa-phone text-brand-400 text-xl mb-2"></i>
+                        <span class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-1">Contact Number</span>
+                        <p class="font-medium text-slate-200">+91 87966 23604</p>
+                    </div>
+
+                    <!-- Email Address -->
+                    <div class="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 flex flex-col items-center">
+                        <i class="fa-solid fa-envelope-open-text text-brand-400 text-xl mb-2"></i>
+                        <span class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-1">Email Address</span>
+                        <p class="font-medium text-slate-200 break-all">novapulse739@gmail.com</p>
+                    </div>
                 </div>
 
-                <!-- Email Address -->
-                <div class="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 flex flex-col items-center">
-                    <i class="fa-solid fa-envelope-open-text text-brand-400 text-xl mb-2"></i>
-                    <span class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-1">Email Address</span>
-                    <p class="font-medium text-slate-200 break-all">novapulse739@gmail.com</p>
+                <!-- Office Addresses Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Head Office (Delhi) -->
+                    <div class="p-5 rounded-2xl bg-slate-800/50 border border-slate-700/60 flex flex-col items-center text-center relative overflow-hidden">
+                        <div class="w-10 h-10 rounded-xl bg-brand-900/60 text-brand-400 flex items-center justify-center text-xl mb-3 border border-brand-700/40">
+                            <i class="fa-solid fa-archway" title="India Gate / Delhi Heritage Structure"></i>
+                        </div>
+                        <span class="inline-block px-3 py-0.5 rounded-full bg-brand-900/80 text-brand-300 text-[10px] font-bold uppercase tracking-wider mb-2 border border-brand-700/30">
+                            Head Office • Delhi
+                        </span>
+                        <p class="font-medium text-slate-200">217/3, Padam Nagar, Delhi - 110007, India</p>
+                    </div>
+
+                    <!-- Branch Office (Uttar Pradesh) -->
+                    <div class="p-5 rounded-2xl bg-slate-800/50 border border-slate-700/60 flex flex-col items-center text-center relative overflow-hidden">
+                        <div class="w-10 h-10 rounded-xl bg-brand-900/60 text-brand-400 flex items-center justify-center text-xl mb-3 border border-brand-700/40">
+                            <i class="fa-solid fa-gopuram" title="Taj Mahal / UP Heritage Structure"></i>
+                        </div>
+                        <span class="inline-block px-3 py-0.5 rounded-full bg-brand-900/80 text-brand-300 text-[10px] font-bold uppercase tracking-wider mb-2 border border-brand-700/30">
+                            Branch Office • UP
+                        </span>
+                        <p class="font-medium text-slate-200">Shop No. 282, Near Bus Stand, Mainpuri, Uttar Pradesh, India</p>
+                    </div>
                 </div>
 
-                <!-- Corporate Office Address -->
-                <div class="p-4 rounded-2xl bg-slate-800/50 border border-slate-700/60 flex flex-col items-center">
-                    <i class="fa-solid fa-location-dot text-brand-400 text-xl mb-2"></i>
-                    <span class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-1">Corporate Address</span>
-                    <p class="font-medium text-slate-200 text-center">217/3, Padam Nagar, Delhi - 110007, India</p>
-                </div>
             </div>
             
             <p class="text-xs text-slate-500 mt-12">&copy; 2026 Nova Pulse. All rights reserved.</p>
