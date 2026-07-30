@@ -44,6 +44,19 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-700 selection:text-white">
 
+    <!-- FLOATING CHAT NOW WIDGET (FIXED BOTTOM-RIGHT) -->
+    <a href="https://wa.me/+918796623604?text=Hi%20Nova%20Pulse,%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+       target="_blank" 
+       title="Chat Now on WhatsApp" 
+       class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-3.5 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-white/20 group">
+        <span class="relative flex h-3 w-3">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-200 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+        </span>
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="text-sm tracking-wide">Chat Now</span>
+    </a>
+
     <!-- NAVBAR -->
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -138,11 +151,14 @@
             <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
                 Drive revenue with intelligent lead generation, simplify operations with HRMS automation, and empower employees through professional training and expert hiring solutions.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#lead-generation" class="px-8 py-4 rounded-xl bg-brand-800 hover:bg-brand-900 text-white font-bold transition-all shadow-lg shadow-brand-900/20">Explore Lead Engine</a>
-                <button onclick="openDemoModal('General Inquiry')" class="px-8 py-4 rounded-xl bg-brand-800 hover:bg-brand-900 text-white font-bold transition-all shadow-lg shadow-brand-900/20 inline-flex items-center justify-center gap-2">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#lead-generation" class="px-8 py-4 rounded-xl bg-brand-800 hover:bg-brand-900 text-white font-bold transition-all shadow-lg shadow-brand-900/20 w-full sm:w-auto">Explore Lead Engine</a>
+                <button onclick="openDemoModal('General Inquiry')" class="px-8 py-4 rounded-xl bg-brand-800 hover:bg-brand-900 text-white font-bold transition-all shadow-lg shadow-brand-900/20 inline-flex items-center justify-center gap-2 w-full sm:w-auto">
                     <i class="fa-solid fa-calendar-check text-brand-100"></i> Book a Personal Demo
                 </button>
+                <a href="https://wa.me/+918796623604?text=Hi%20Nova%20Pulse,%20I%20want%20to%20chat%20with%20an%20expert." target="_blank" class="px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition-all shadow-lg shadow-emerald-900/20 inline-flex items-center justify-center gap-2 w-full sm:w-auto">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Chat Now
+                </a>
             </div>
         </div>
     </section>
@@ -265,9 +281,14 @@
             <div class="mb-16 text-center bg-brand-50 p-8 rounded-3xl border border-brand-200">
                 <h3 class="text-2xl font-bold text-slate-900 mb-2">Ready to Boost Your Sales Pipeline?</h3>
                 <p class="text-slate-600 mb-6 max-w-xl mx-auto">Schedule a live demo to see how our targeted lead engines generate real, revenue-ready B2B opportunities.</p>
-                <button onclick="openDemoModal('Lead Generation')" class="px-8 py-3.5 bg-brand-800 hover:bg-brand-900 text-white font-bold rounded-xl shadow-lg transition-all inline-flex items-center gap-2">
-                    <i class="fa-solid fa-calendar-check"></i> Book a Lead Generation Demo
-                </button>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button onclick="openDemoModal('Lead Generation')" class="px-8 py-3.5 bg-brand-800 hover:bg-brand-900 text-white font-bold rounded-xl shadow-lg transition-all inline-flex items-center gap-2">
+                        <i class="fa-solid fa-calendar-check"></i> Book a Lead Generation Demo
+                    </button>
+                    <a href="https://wa.me/+918796623604?text=Hi%20Nova%20Pulse,%20I%20want%20to%20chat%20about%20Lead%20Generation." target="_blank" class="px-8 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-lg transition-all inline-flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Chat Now
+                    </a>
+                </div>
             </div>
 
             <!-- CUSTOMER TESTIMONIAL: MR. PRAVEEN YADAV -->
@@ -1055,7 +1076,7 @@
             
             <!-- SOCIAL & DIRECT CONNECT ICONS -->
             <div class="flex flex-wrap justify-center gap-5 mb-12">
-                <!-- WhatsApp -->
+                <!-- WhatsApp / Chat Now -->
                 <a href="https://wa.me/+918796623604" target="_blank" title="Chat on WhatsApp" class="w-14 h-14 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center text-2xl transition-all shadow-lg hover:scale-105">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
