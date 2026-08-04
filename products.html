@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Store - NovaPulse</title>
+    <!-- Add Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
@@ -29,6 +31,9 @@
             align-items: center;
             border-bottom: 1px solid #1e1b4b;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo-container {
@@ -39,14 +44,14 @@
         }
 
         .logo-container img {
-            height: 40px;
+            height: 45px;
             width: auto;
             object-fit: contain;
         }
 
         .logo-container span {
-            color: #a855f7;
-            font-size: 1.5rem;
+            color: #ffffff;
+            font-size: 1.6rem;
             font-weight: bold;
             letter-spacing: 0.5px;
         }
@@ -54,154 +59,266 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 20px;
+            gap: 25px;
         }
 
         .nav-links a {
             color: #cbd5e1;
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: 500;
-            transition: color 0.2s ease;
+            transition: color 0.2s ease, border-bottom 0.2s ease;
+            padding-bottom: 5px;
         }
 
         .nav-links a:hover,
         .nav-links a.active {
-            color: #c084fc;
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff;
         }
 
         /* HERO HEADER */
         .page-header {
-            background: linear-gradient(135deg, #2e1065 0%, #0f172a 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
             color: #ffffff;
             text-align: center;
-            padding: 50px 20px;
-            border-bottom: 1px solid #3b0764;
+            padding: 80px 20px;
+            border-bottom: 1px solid #1e3a8a;
         }
 
         .page-header h1 {
-            font-size: 2.2rem;
-            color: #e9d5ff;
-            margin-bottom: 10px;
+            font-size: 2.8rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
         }
 
         .page-header p {
-            color: #c084fc;
-            font-size: 1.05rem;
-            max-width: 600px;
+            color: #bfdbfe;
+            font-size: 1.15rem;
+            max-width: 700px;
             margin: 0 auto;
+            line-height: 1.6;
         }
 
         /* MAIN CONTAINER */
         .container {
             max-width: 1200px;
-            margin: 40px auto;
+            margin: 50px auto;
             padding: 0 20px;
             flex: 1;
         }
 
         .category-title {
-            font-size: 1.4rem;
-            margin: 30px 0 15px;
-            color: #d8b4fe;
-            border-left: 4px solid #a855f7;
-            padding-left: 12px;
+            font-size: 1.6rem;
+            margin: 40px 0 20px;
+            color: #f1f5f9;
+            border-left: 5px solid #ffffff;
+            padding-left: 15px;
+            letter-spacing: -0.2px;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
         }
 
-        /* CARD STYLES */
+        /* CARD STYLES with LIGHT PURPLE shades */
         .card {
-            background: #1e1b4b;
-            border: 1px solid #3b0764;
-            border-radius: 10px;
-            padding: 24px;
+            background: #ffffff; /* White card for high contrast */
+            border: 1px solid #e9d5ff; /* Light purple border */
+            border-radius: 12px;
+            padding: 25px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 10px rgba(168, 85, 247, 0.1); /* Soft purple shadow */
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle Purple Gradient Overlay on Hover */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(233, 213, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
         }
 
         .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(168, 85, 247, 0.15);
-            border-color: #7e22ce;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(168, 85, 247, 0.2); /* Deeper purple shadow on hover */
+            border-color: #c084fc; /* Darker light purple border on hover */
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card > * {
+            position: relative;
+            z-index: 2; /* Keep content above the overlay */
+        }
+
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 18px;
+            border: 1px solid #f3e8ff; /* Very light purple image border */
         }
 
         .card h3 {
-            font-size: 1.2rem;
-            color: #f3e8ff;
-            margin-bottom: 8px;
+            font-size: 1.3rem;
+            color: #1e1b4b; /* Very dark purple/slate for text */
+            margin-bottom: 10px;
+            letter-spacing: -0.1px;
         }
 
         .card p {
-            font-size: 0.9rem;
-            color: #cbd5e1;
-            margin-bottom: 18px;
+            font-size: 0.95rem;
+            color: #475569; /* Slate grey for description */
+            margin-bottom: 20px;
             line-height: 1.5;
         }
 
         label {
             display: block;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            color: #c084fc;
-            margin-bottom: 6px;
+            color: #6b21a8; /* Medium purple for label */
+            margin-bottom: 7px;
         }
 
         .variant-select {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #581c87;
-            border-radius: 6px;
+            padding: 11px;
+            margin-bottom: 22px;
+            border: 1px solid #d8b4fe; /* Medium purple border */
+            border-radius: 7px;
             outline: none;
-            background-color: #0f172a;
-            color: #e9d5ff;
-            font-size: 0.9rem;
+            background-color: #fdfaff; /* Almost white purple-tinted background */
+            color: #1e1b4b; /* Dark text in dropdown */
+            font-size: 0.95rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .variant-select:focus {
+            border-color: #a855f7; /* Brighter purple on focus */
         }
 
         .variant-select option {
-            background-color: #0f172a;
-            color: #e9d5ff;
+            background-color: #ffffff;
+            color: #1e1b4b;
         }
 
         .buy-btn {
-            background-color: #9333ea;
+            background-color: #7e22ce; /* Vibrant Purple button */
             color: #ffffff;
             border: none;
-            padding: 12px;
-            border-radius: 6px;
+            padding: 13px;
+            border-radius: 7px;
             cursor: pointer;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: 600;
             width: 100%;
             transition: background-color 0.2s ease;
+            letter-spacing: 0.2px;
         }
 
         .buy-btn:hover {
-            background-color: #7e22ce;
+            background-color: #6b21a8; /* Darker Purple on hover */
+        }
+
+        /* CONTACT & SOCIAL MEDIA SECTION */
+        .contact-social-section {
+            background-color: #111827; /* Dark but different shade */
+            padding: 60px 20px;
+            border-top: 1px solid #1e3a8a;
+            margin-top: auto;
+        }
+
+        .contact-social-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            text-align: left;
+        }
+
+        .contact-info, .social-media {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-info h3, .social-media h3 {
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #bfdbfe;
+            font-size: 1rem;
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+            color: #ffffff;
+            width: 20px; /* Fixed width for alignment */
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #bfdbfe;
+            font-size: 1.5rem;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .social-links a:hover {
+            color: #ffffff;
+            transform: scale(1.1);
         }
 
         /* FOOTER */
         footer {
             background-color: #090d16;
-            color: #c084fc;
+            color: #94a3b8;
             text-align: center;
             padding: 25px 20px;
             font-size: 0.9rem;
-            margin-top: auto;
             border-top: 1px solid #1e1b4b;
         }
 
         footer p {
             margin: 0;
+        }
+
+        /* Responsive adjustments for headers */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            .page-header p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -228,19 +345,19 @@
     <!-- MAIN CONTENT -->
     <div class="container">
 
-        <!-- BIOMETRIC MACHINES SECTION -->
-        <h2 class="category-title">Biometric Attendance & Access Control</h2>
+        <!-- eSSL SECTION -->
+        <h2 class="category-title">eSSL Biometric Attendance Systems</h2>
         <div class="grid">
 
             <div class="card">
                 <div>
-                    <h3>Biometric Terminal</h3>
-                    <p>High-precision authentication device supporting fingerprint and RFID options for workforce tracking.</p>
-                    <label for="bio-model">Select Variant / Model:</label>
-                    <select id="bio-model" class="variant-select">
-                        <option value="9990">Model A1 - Fingerprint Only (₹9,990)</option>
-                        <option value="14990">Model A2 - Fingerprint + RFID Card (₹14,990)</option>
-                        <option value="19990">Model A3 Pro - Face Recognition + Fingerprint + RFID (₹19,990)</option>
+                    <img src="https://via.placeholder.com/300x180/7e22ce/ffffff?text=eSSL+A1+Fingerprint" alt="eSSL A1 Fingerprint" class="product-image">
+                    <h3>eSSL A1</h3>
+                    <p>Compact fingerprint-based attendance machine for small to medium enterprises.</p>
+                    <label for="essl-a1-variant">Select Variant:</label>
+                    <select id="essl-a1-variant" class="variant-select">
+                        <option value="standard">Standard (₹8,990)</option>
+                        <option value="battery">With Battery Backup (₹9,990)</option>
                     </select>
                 </div>
                 <button class="buy-btn">Inquire / Order</button>
@@ -248,12 +365,27 @@
 
             <div class="card">
                 <div>
-                    <h3>Portable Biometric Scanner</h3>
-                    <p>Handheld mobile biometric device equipped with cellular connectivity for site verification.</p>
-                    <label for="portable-model">Select Variant / Model:</label>
-                    <select id="portable-model" class="variant-select">
-                        <option value="12500">Model H1 - 4G + Fingerprint (₹12,500)</option>
-                        <option value="16500">Model H2 Pro - 4G + Thermal + Face Scan (₹16,500)</option>
+                    <img src="https://via.placeholder.com/300x180/6b21a8/ffffff?text=eSSL+Face+iFace" alt="eSSL iFace" class="product-image">
+                    <h3>eSSL iFace 302</h3>
+                    <p>Advanced facial recognition and fingerprint device with cloud connectivity.</p>
+                    <label for="essl-iface-variant">Select Variant:</label>
+                    <select id="essl-iface-variant" class="variant-select">
+                        <option value="standard">Face + Fingerprint (₹16,490)</option>
+                        <option value="access">With Access Control (₹17,990)</option>
+                    </select>
+                </div>
+                <button class="buy-btn">Inquire / Order</button>
+            </div>
+
+            <div class="card">
+                <div>
+                    <img src="https://via.placeholder.com/300x180/9333ea/ffffff?text=eSSL+RFID+Card" alt="eSSL RFID Card" class="product-image">
+                    <h3>eSSL K90 Pro</h3>
+                    <p>Economic card-based attendance machine with built-in battery backup.</p>
+                    <label for="essl-k90-variant">Select Variant:</label>
+                    <select id="essl-k90-variant" class="variant-select">
+                        <option value="card">RFID Card Only (₹7,490)</option>
+                        <option value="f-card">Fingerprint + Card (₹8,490)</option>
                     </select>
                 </div>
                 <button class="buy-btn">Inquire / Order</button>
@@ -261,19 +393,19 @@
 
         </div>
 
-        <!-- COMPUTER ACCESSORIES SECTION -->
-        <h2 class="category-title">Office Accessories & Peripherals</h2>
+        <!-- HIKVISION SECTION -->
+        <h2 class="category-title">Hikvision Access Control & Biometrics</h2>
         <div class="grid">
 
             <div class="card">
                 <div>
-                    <h3>Business Keyboard</h3>
-                    <p>Durable ergonomic keyboard built for intense typing workloads and silent office environments.</p>
-                    <label for="kb-type">Select Connection:</label>
-                    <select id="kb-type" class="variant-select">
-                        <option value="899">Wired USB (₹899)</option>
-                        <option value="1499">Wireless 2.4GHz (₹1,499)</option>
-                        <option value="2299">Multi-Device Bluetooth (₹2,299)</option>
+                    <img src="https://via.placeholder.com/300x180/bfdbfe/0f172a?text=Hikvision+MinMoe+Face" alt="Hikvision MinMoe" class="product-image">
+                    <h3>Hikvision MinMoe</h3>
+                    <p>Industrial facial recognition terminal with ultra-fast identification.</p>
+                    <label for="hik-minmoe-variant">Select Model:</label>
+                    <select id="hik-minmoe-variant" class="variant-select">
+                        <option value="lite">DS-K1T341AM (₹19,990)</option>
+                        <option value="pro">DS-K1T671 (₹24,490)</option>
                     </select>
                 </div>
                 <button class="buy-btn">Inquire / Order</button>
@@ -281,33 +413,94 @@
 
             <div class="card">
                 <div>
-                    <h3>Precision Optical Mouse</h3>
-                    <p>High-precision optical mouse with silent switches and ergonomic palm support.</p>
-                    <label for="mouse-type">Select Connection:</label>
-                    <select id="mouse-type" class="variant-select">
-                        <option value="499">Wired USB (₹499)</option>
-                        <option value="899">Wireless Ergonomic (₹899)</option>
+                    <img src="https://via.placeholder.com/300x180/3b82f6/ffffff?text=Hikvision+Card+Reader" alt="Hikvision Card Reader" class="product-image">
+                    <h3>Hikvision Access Terminal</h3>
+                    <p>Standalone multi-door access control terminal supporting card and pin.</p>
+                    <label for="hik-access-variant">Select Model:</label>
+                    <select id="hik-access-variant" class="variant-select">
+                        <option value="single">Single Door (₹12,990)</option>
+                        <option value="multi">Multi Door Controller (₹21,490)</option>
                     </select>
                 </div>
                 <button class="buy-btn">Inquire / Order</button>
             </div>
 
+        </div>
+
+        <!-- OTHER PRODUCTS SECTION -->
+        <h2 class="category-title">Other Electrical Products & Accessories</h2>
+        <div class="grid">
+
             <div class="card">
                 <div>
-                    <h3>Workstation Desktop Combo</h3>
-                    <p>Unified keyboard and mouse bundle engineered for desktop setup deployment.</p>
-                    <label for="combo-type">Select Package:</label>
-                    <select id="combo-type" class="variant-select">
-                        <option value="1299">Standard Wired Combo (₹1,299)</option>
-                        <option value="2199">Pro Wireless Combo (₹2,199)</option>
-                    </select>
+                    <img src="https://via.placeholder.com/300x180/d8b4fe/1e1b4b?text=Wired+Keyboard" alt="Wired Keyboard" class="product-image">
+                    <h3>eSSL KB-100 Keyboard</h3>
+                    <p>Standard wired USB keyboard, durable for daily office use.</p>
                 </div>
-                <button class="buy-btn">Inquire / Order</button>
+                <button class="buy-btn">Buy for ₹699</button>
+            </div>
+
+            <div class="card">
+                <div>
+                    <img src="https://via.placeholder.com/300x180/e9d5ff/1e1b4b?text=Optical+Mouse" alt="Optical Mouse" class="product-image">
+                    <h3>eSSL M-50 Optical Mouse</h3>
+                    <p>Simple and ergonomic wired optical mouse for workstation efficiency.</p>
+                </div>
+                <button class="buy-btn">Buy for ₹399</button>
+            </div>
+
+            <div class="card">
+                <div>
+                    <img src="https://via.placeholder.com/300x180/f3e8ff/1e1b4b?text=Card+Printer" alt="Card Printer" class="product-image">
+                    <h3>Hiti CS-200e Card Printer</h3>
+                    <p>Ideal solution for ID card printing, single-sided, high-resolution.</p>
+                </div>
+                <button class="buy-btn">Buy for ₹34,990</button>
+            </div>
+
+            <div class="card">
+                <div>
+                    <img src="https://via.placeholder.com/300x180/fdfaff/1e1b4b?text=Door+Lock" alt="Door Lock" class="product-image">
+                    <h3>Electromagnetic Door Lock</h3>
+                    <p>Heavy-duty magnetic lock (600lbs) for access control systems.</p>
+                </div>
+                <button class="buy-btn">Buy for ₹3,490</button>
             </div>
 
         </div>
 
     </div>
+
+    <!-- CONTACT & SOCIAL MEDIA SECTION -->
+    <section class="contact-social-section">
+        <div class="contact-social-container">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 NovaStreet, Tech City, PIN 560001</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+91 98765 43210</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>support@novapulse.in</span>
+                </div>
+            </div>
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <p style="color: #bfdbfe; margin-bottom: 10px;">Stay updated with our latest products and offers.</p>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer>
