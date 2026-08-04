@@ -13,21 +13,22 @@
         }
 
         body {
-            background-color: #f8fafc;
-            color: #1e293b;
+            background-color: #0f172a;
+            color: #f1f5f9;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
-        /* NAVBAR - Matches index.html Theme */
+        /* NAVBAR */
         nav {
-            background-color: #0f172a;
+            background-color: #090d16;
             padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #1e1b4b;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
 
         .logo-container {
@@ -44,7 +45,7 @@
         }
 
         .logo-container span {
-            color: #ffffff;
+            color: #a855f7;
             font-size: 1.5rem;
             font-weight: bold;
             letter-spacing: 0.5px;
@@ -66,24 +67,26 @@
 
         .nav-links a:hover,
         .nav-links a.active {
-            color: #38bdf8;
+            color: #c084fc;
         }
 
         /* HERO HEADER */
         .page-header {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            background: linear-gradient(135deg, #2e1065 0%, #0f172a 100%);
             color: #ffffff;
             text-align: center;
             padding: 50px 20px;
+            border-bottom: 1px solid #3b0764;
         }
 
         .page-header h1 {
             font-size: 2.2rem;
+            color: #e9d5ff;
             margin-bottom: 10px;
         }
 
         .page-header p {
-            color: #94a3b8;
+            color: #c084fc;
             font-size: 1.05rem;
             max-width: 600px;
             margin: 0 auto;
@@ -100,8 +103,8 @@
         .category-title {
             font-size: 1.4rem;
             margin: 30px 0 15px;
-            color: #0f172a;
-            border-left: 4px solid #38bdf8;
+            color: #d8b4fe;
+            border-left: 4px solid #a855f7;
             padding-left: 12px;
         }
 
@@ -114,31 +117,32 @@
 
         /* CARD STYLES */
         .card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
+            background: #1e1b4b;
+            border: 1px solid #3b0764;
             border-radius: 10px;
             padding: 24px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(168, 85, 247, 0.15);
+            border-color: #7e22ce;
         }
 
         .card h3 {
             font-size: 1.2rem;
-            color: #0f172a;
+            color: #f3e8ff;
             margin-bottom: 8px;
         }
 
         .card p {
             font-size: 0.9rem;
-            color: #64748b;
+            color: #cbd5e1;
             margin-bottom: 18px;
             line-height: 1.5;
         }
@@ -147,7 +151,7 @@
             display: block;
             font-size: 0.85rem;
             font-weight: 600;
-            color: #475569;
+            color: #c084fc;
             margin-bottom: 6px;
         }
 
@@ -155,16 +159,21 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
-            border: 1px solid #cbd5e1;
+            border: 1px solid #581c87;
             border-radius: 6px;
             outline: none;
-            background-color: #f8fafc;
-            color: #334155;
+            background-color: #0f172a;
+            color: #e9d5ff;
             font-size: 0.9rem;
         }
 
+        .variant-select option {
+            background-color: #0f172a;
+            color: #e9d5ff;
+        }
+
         .buy-btn {
-            background-color: #0284c7;
+            background-color: #9333ea;
             color: #ffffff;
             border: none;
             padding: 12px;
@@ -177,17 +186,18 @@
         }
 
         .buy-btn:hover {
-            background-color: #0369a1;
+            background-color: #7e22ce;
         }
 
-        /* FOOTER - Matches index.html Theme */
+        /* FOOTER */
         footer {
-            background-color: #0f172a;
-            color: #94a3b8;
+            background-color: #090d16;
+            color: #c084fc;
             text-align: center;
             padding: 25px 20px;
             font-size: 0.9rem;
             margin-top: auto;
+            border-top: 1px solid #1e1b4b;
         }
 
         footer p {
