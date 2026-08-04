@@ -3,308 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | Vedaapulse - Sponsored By Nova Pulse</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Business Store - NovaPulse</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background: #1e293b;
+            color: #fff;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            margin: 20px 0 10px;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 5px;
+            color: #1e293b;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .variant-select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #16a34a;
+            margin-bottom: 15px;
+        }
+
+        .buy-btn {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            transition: background 0.2s ease;
+        }
+
+        .buy-btn:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
+<body>
 
-    <!-- Navigation Bar -->
-    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <!-- Brand Logos Section -->
-            <div class="flex items-center gap-4">
-                <!-- Vedaapulse Logo -->
-                <a href="index.html" class="flex items-center gap-2">
-                    <img src="Vedaapulse-Logo.png" alt="Vedaapulse Logo" class="h-12 w-auto object-contain">
-                </a>
-                <span class="text-slate-700 text-xl font-light">/</span>
-                <!-- Nova Pulse Sponsorship Logo & Badge -->
-                <div class="flex items-center gap-2 bg-slate-800/80 border border-slate-700/60 px-3 py-1 rounded-full shadow-sm">
-                    <span class="text-xs font-serif italic text-amber-400/90 tracking-wide">Sponsored By</span>
-                    <a href="index.html" class="flex items-center">
-                        <img src="Logo.png" alt="Nova Pulse Logo" class="h-6 w-auto object-contain">
-                    </a>
+    <div class="container">
+        <header>
+            <h1>NovaPulse Business Store</h1>
+            <p>Official hardware solutions for attendance, access control, and IT essentials.</p>
+        </header>
+
+        <!-- BIOMETRIC MACHINES SECTION -->
+        <h2 class="category-title">Biometric Attendance & Access Control</h2>
+        <div class="grid">
+
+            <!-- Product 1 -->
+            <div class="card">
+                <div>
+                    <h3>Biometric Terminal</h3>
+                    <p>High-precision authentication device supporting multiple verification modes for enterprise workforce tracking.</p>
+                    <label for="bio-model"><strong>Select Variant / Model:</strong></label>
+                    <select id="bio-model" class="variant-select">
+                        <option value="9990">Model A1 - Fingerprint Only (₹9,990)</option>
+                        <option value="14990">Model A2 - Fingerprint + RFID Card (₹14,990)</option>
+                        <option value="19990">Model A3 Pro - Face Recognition + Fingerprint + RFID (₹19,990)</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="buy-btn">Inquire / Purchase</button>
                 </div>
             </div>
 
-            <!-- Navigation Links -->
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-                <a href="index.html#services" class="hover:text-amber-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-leaf"></i> Organic Assurance</a>
-                <a href="products.html" class="text-amber-400 flex items-center gap-2"><i class="fa-solid fa-basket-shopping"></i> Products</a>
-                <a href="index.html#about" class="hover:text-amber-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-circle-info"></i> About Us</a>
-                <a href="#cart" class="hover:text-slate-900 bg-amber-500 hover:bg-amber-400 px-5 py-2.5 rounded-full text-slate-900 font-semibold transition-all flex items-center gap-2">
-                    <i class="fa-solid fa-cart-shopping"></i> Cart (0)
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Header & Controls Section -->
-    <section class="pt-32 pb-12 px-6 max-w-7xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-10">
-            <span class="text-xs font-serif italic text-amber-400 tracking-wider bg-amber-500/10 px-4 py-1.5 rounded-full border border-amber-500/20">
-                A Division of Nova Pulse Group
-            </span>
-            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl mt-4 mb-4">Vedaapulse Pure Essentials</h1>
-            <p class="text-slate-400">Authentic cold-pressed oils, traditional homemade pickles, premium dry fruits, and organic kitchen staples crafted for healthy living.</p>
-        </div>
-
-        <!-- Controls: Search & Category Filters -->
-        <div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-8">
-            <!-- Search Bar -->
-            <div class="relative w-full md:w-80">
-                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search oils, dry fruits, spices..." class="w-full pl-10 pr-4 py-2.5 bg-slate-800/80 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:border-amber-500">
-            </div>
-
-            <!-- Category Buttons -->
-            <div class="flex flex-wrap gap-2 justify-center" id="categoryButtons">
-                <button onclick="setCategory('all')" class="cat-btn active px-4 py-2 text-sm font-semibold rounded-lg bg-amber-500 text-slate-900 transition-all">All Products</button>
-                <button onclick="setCategory('oils')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Cold-Pressed Oils</button>
-                <button onclick="setCategory('aachar')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Traditional Aachar</button>
-                <button onclick="setCategory('dry-fruits')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Dry Fruits & Nuts</button>
-                <button onclick="setCategory('essentials')" class="cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all">Organic Essentials</button>
-            </div>
-        </div>
-
-        <!-- Product Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="productGrid">
-            
-            <!-- Product 1: Mustard Oil -->
-            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="oils">
+            <!-- Product 2 -->
+            <div class="card">
                 <div>
-                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
-                        <i class="fa-solid fa-bottle-droplet"></i>
-                        <span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded border border-amber-500/30">100% Pure</span>
-                    </div>
-                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Cold-Pressed Oils</span>
-                    <h3 class="text-lg font-bold mt-1 mb-1">Cold-Pressed Mustard Oil</h3>
-                    <p class="text-slate-400 text-xs mb-3">Kachi Ghani mustard oil extracted traditionally without heat to retain full aroma and nutrients.</p>
+                    <h3>Portable Handheld Biometric Scanner</h3>
+                    <p>Rugged, mobile biometric device ideal for field workforce logging and remote site verification.</p>
+                    <label for="portable-model"><strong>Select Variant / Model:</strong></label>
+                    <select id="portable-model" class="variant-select">
+                        <option value="12500">Model H1 - 4G + Fingerprint (₹12,500)</option>
+                        <option value="16500">Model H2 Pro - 4G + Thermal + Face Scan (₹16,500)</option>
+                    </select>
                 </div>
                 <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-xl font-extrabold text-white">₹340 <span class="text-xs font-normal text-slate-400">/ 1 Litre</span></span>
-                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.9</div>
-                    </div>
-                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <!-- Product 2: Mango Aachar -->
-            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="aachar">
-                <div>
-                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center mb-4 relative overflow-hidden">
-                        <img src="mango-aachar.png" alt="Mango Aachar" class="w-full h-full object-cover rounded-lg">
-                        <span class="absolute top-2 left-2 bg-amber-500/90 text-slate-900 text-[10px] font-bold px-2 py-0.5 rounded shadow">Homemade Recipe</span>
-                    </div>
-                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Traditional Aachar</span>
-                    <h3 class="text-lg font-bold mt-1 mb-1">Mango Aachar (Aam Ka Aachar)</h3>
-                    <p class="text-slate-400 text-xs mb-3">Traditional sun-dried raw mango pickle infused with authentic aromatic spices and mustard oil.</p>
-                </div>
-                <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-xl font-extrabold text-white">₹220 <span class="text-xs font-normal text-slate-400">/ 500g</span></span>
-                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.8</div>
-                    </div>
-                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <!-- Product 3: Coconut Oil -->
-            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="oils">
-                <div>
-                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
-                        <i class="fa-solid fa-droplet"></i>
-                    </div>
-                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Cold-Pressed Oils</span>
-                    <h3 class="text-lg font-bold mt-1 mb-1">Virgin Coconut Oil</h3>
-                    <p class="text-slate-400 text-xs mb-3">Raw, unrefined extra virgin coconut oil pressed from fresh coconuts for cooking and wellness.</p>
-                </div>
-                <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-xl font-extrabold text-white">₹450 <span class="text-xs font-normal text-slate-400">/ 500ml</span></span>
-                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 5.0</div>
-                    </div>
-                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <!-- Product 4: A2 Desi Ghee -->
-            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="essentials">
-                <div>
-                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
-                        <i class="fa-solid fa-bowl-food"></i>
-                        <span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded border border-amber-500/30">Bilona Method</span>
-                    </div>
-                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Organic Essentials</span>
-                    <h3 class="text-lg font-bold mt-1 mb-1">Organic A2 Desi Ghee</h3>
-                    <p class="text-slate-400 text-xs mb-3">Pure cultured A2 Gir cow ghee churned using traditional Bilona process for high nutrient density.</p>
-                </div>
-                <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-xl font-extrabold text-white">₹890 <span class="text-xs font-normal text-slate-400">/ 500ml</span></span>
-                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.9</div>
-                    </div>
-                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <!-- Product 5: Premium Almonds -->
-            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="dry-fruits">
-                <div>
-                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
-                        <i class="fa-solid fa-seedling"></i>
-                        <span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded border border-amber-500/30">Raw & Crunchy</span>
-                    </div>
-                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Dry Fruits & Nuts</span>
-                    <h3 class="text-lg font-bold mt-1 mb-1">California Almonds (Badam)</h3>
-                    <p class="text-slate-400 text-xs mb-3">Handpicked premium quality unroasted almonds rich in protein, vitamin E, and fiber.</p>
-                </div>
-                <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-xl font-extrabold text-white">₹520 <span class="text-xs font-normal text-slate-400">/ 500g</span></span>
-                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.9</div>
-                    </div>
-                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <!-- Product 6: Seeds Mix -->
-            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="dry-fruits">
-                <div>
-                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
-                        <i class="fa-solid fa-plant-wilt"></i>
-                        <span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded border border-amber-500/30">Superfood Mix</span>
-                    </div>
-                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Dry Fruits & Nuts</span>
-                    <h3 class="text-lg font-bold mt-1 mb-1">7-in-1 Roasted Seeds Mix</h3>
-                    <p class="text-slate-400 text-xs mb-3">Nutritious blend of pumpkin, chia, flax, sunflower, watermelon, sesame, and muskmelon seeds.</p>
-                </div>
-                <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-xl font-extrabold text-white">₹280 <span class="text-xs font-normal text-slate-400">/ 250g</span></span>
-                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.8</div>
-                    </div>
-                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <!-- Product 7: Kismis -->
-            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="dry-fruits">
-                <div>
-                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
-                        <i class="fa-solid fa-wheat-awn"></i>
-                    </div>
-                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Dry Fruits & Nuts</span>
-                    <h3 class="text-lg font-bold mt-1 mb-1">Golden Raisins (Kismis)</h3>
-                    <p class="text-slate-400 text-xs mb-3">Naturally dried sweet golden raisins packed with iron, potassium, and quick natural energy.</p>
-                </div>
-                <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-xl font-extrabold text-white">₹190 <span class="text-xs font-normal text-slate-400">/ 250g</span></span>
-                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.7</div>
-                    </div>
-                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <!-- Product 8: Walnut Kernels -->
-            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="dry-fruits">
-                <div>
-                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
-                        <i class="fa-solid fa-brain"></i>
-                        <span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded border border-amber-500/30">Omega-3 Rich</span>
-                    </div>
-                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Dry Fruits & Nuts</span>
-                    <h3 class="text-lg font-bold mt-1 mb-1">Chilean Walnut Kernels (Akhrot)</h3>
-                    <p class="text-slate-400 text-xs mb-3">Extra-light, crunchy halved walnuts loaded with Omega-3 fatty acids for brain health.</p>
-                </div>
-                <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-xl font-extrabold text-white">₹640 <span class="text-xs font-normal text-slate-400">/ 500g</span></span>
-                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.9</div>
-                    </div>
-                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <!-- Product 9: Dates -->
-            <div class="product-card bg-slate-800/50 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition-all" data-category="dry-fruits">
-                <div>
-                    <div class="w-full h-44 bg-slate-700/40 rounded-lg flex items-center justify-center text-amber-400 text-4xl mb-4 relative overflow-hidden">
-                        <i class="fa-solid fa-cookie"></i>
-                        <span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded border border-amber-500/30">No Added Sugar</span>
-                    </div>
-                    <span class="text-xs uppercase font-semibold text-amber-400 tracking-wider">Dry Fruits & Nuts</span>
-                    <h3 class="text-lg font-bold mt-1 mb-1">Premium Kimia Dates (Khajoor)</h3>
-                    <p class="text-slate-400 text-xs mb-3">Soft, moist, naturally sweet fresh dates sourced directly to retain full nutritional value.</p>
-                </div>
-                <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-xl font-extrabold text-white">₹310 <span class="text-xs font-normal text-slate-400">/ 500g</span></span>
-                        <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i> 4.8</div>
-                    </div>
-                    <button class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
-                    </button>
+                    <button class="buy-btn">Inquire / Purchase</button>
                 </div>
             </div>
 
         </div>
-    </section>
 
-    <!-- Client-side Filtering Script -->
-    <script>
-        let currentCategory = 'all';
+        <!-- COMPUTER ACCESSORIES SECTION -->
+        <h2 class="category-title">Office Peripherals & Accessories</h2>
+        <div class="grid">
 
-        function setCategory(category) {
-            currentCategory = category;
-            
-            // Toggle Active Button Styles
-            document.querySelectorAll('.cat-btn').forEach(btn => {
-                btn.className = 'cat-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 transition-all';
-            });
-            event.target.className = 'cat-btn active px-4 py-2 text-sm font-semibold rounded-lg bg-amber-500 text-slate-900 transition-all';
+            <!-- Keyboard -->
+            <div class="card">
+                <div>
+                    <h3>Business Ergonomic Keyboard</h3>
+                    <p>Durable full-size keyboard engineered for long typing sessions and high office workloads.</p>
+                    <label for="kb-type"><strong>Select Connection:</strong></label>
+                    <select id="kb-type" class="variant-select">
+                        <option value="899">Wired USB (₹899)</option>
+                        <option value="1499">Wireless 2.4GHz (₹1,499)</option>
+                        <option value="2299">Multi-Device Bluetooth (₹2,299)</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="buy-btn">Inquire / Purchase</button>
+                </div>
+            </div>
 
-            filterProducts();
-        }
+            <!-- Mouse -->
+            <div class="card">
+                <div>
+                    <h3>Precision Optical Mouse</h3>
+                    <p>Ergonomic optical mouse designed for accurate tracking and silent clicking in quiet workspaces.</p>
+                    <label for="mouse-type"><strong>Select Connection:</strong></label>
+                    <select id="mouse-type" class="variant-select">
+                        <option value="499">Wired USB (₹499)</option>
+                        <option value="899">Wireless Ergonomic (₹899)</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="buy-btn">Inquire / Purchase</button>
+                </div>
+            </div>
 
-        function filterProducts() {
-            const searchQuery = document.getElementById('searchInput').value.toLowerCase();
-            const cards = document.querySelectorAll('.product-card');
+            <!-- Combo -->
+            <div class="card">
+                <div>
+                    <h3>Desktop Desktop Combo (Mouse + Keyboard)</h3>
+                    <p>Complete workstation input bundle with unified wireless receiver.</p>
+                    <label for="combo-type"><strong>Select Package:</strong></label>
+                    <select id="combo-type" class="variant-select">
+                        <option value="1299">Standard Wired Combo (₹1,299)</option>
+                        <option value="2199">Pro Wireless Combo (₹2,199)</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="buy-btn">Inquire / Purchase</button>
+                </div>
+            </div>
 
-            cards.forEach(card => {
-                const title = card.querySelector('h3').innerText.toLowerCase();
-                const desc = card.querySelector('p').innerText.toLowerCase();
-                const category = card.getAttribute('data-category');
+        </div>
+    </div>
 
-                const matchesCategory = (currentCategory === 'all' || category === currentCategory);
-                const matchesSearch = title.includes(searchQuery) || desc.includes(searchQuery);
-
-                if (matchesCategory && matchesSearch) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-    </script>
 </body>
 </html>
