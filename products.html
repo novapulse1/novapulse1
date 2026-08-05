@@ -1,511 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Store - NovaPulse</title>
-    <!-- Add Font Awesome for social media icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaPulse - Workforce & Access Management Solutions</title>
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #0f172a;
+      color: #f1f5f9;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-        body {
-            background-color: #0f172a;
-            color: #f1f5f9;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+    /* NAVBAR */
+    nav {
+      background-color: #090d16;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1e1b4b;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .logo-container img {
+      height: 45px;
+      width: auto;
+      object-fit: contain;
+    }
+    .logo-container span {
+      color: #ffffff;
+      font-size: 1.6rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+    .nav-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.2s ease, border-bottom 0.2s ease;
+      padding-bottom: 5px;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: #ffffff;
+      border-bottom: 2px solid #ffffff;
+    }
 
-        /* NAVBAR */
-        nav {
-            background-color: #090d16;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #1e1b4b;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    /* HERO HEADER */
+    .hero-section {
+      background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 100px 20px;
+      border-bottom: 1px solid #1e3a8a;
+    }
+    .hero-section h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+    .hero-section p {
+      color: #bfdbfe;
+      font-size: 1.2rem;
+      max-width: 750px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .btn-primary {
+      background-color: #7e22ce;
+      color: #ffffff;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+    }
+    .btn-primary:hover {
+      background-color: #6b21a8;
+    }
+    .btn-secondary {
+      border: 1px solid #bfdbfe;
+      color: #ffffff;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+    }
+    .btn-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+      flex: 1;
+    }
+    .section-title {
+      font-size: 1.8rem;
+      margin: 40px 0 25px;
+      color: #f1f5f9;
+      border-left: 5px solid #ffffff;
+      padding-left: 15px;
+      letter-spacing: -0.2px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
 
-        .logo-container img {
-            height: 45px;
-            width: auto;
-            object-fit: contain;
-        }
+    /* CARD STYLES */
+    .card {
+      background: #ffffff;
+      border: 1px solid #e9d5ff;
+      border-radius: 12px;
+      padding: 30px 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 10px rgba(168, 85, 247, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(233, 213, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(168, 85, 247, 0.2);
+      border-color: #c084fc;
+    }
+    .card:hover::before {
+      opacity: 1;
+    }
+    .card > * {
+      position: relative;
+      z-index: 2;
+    }
+    .card-icon {
+      font-size: 2.5rem;
+      color: #7e22ce;
+      margin-bottom: 20px;
+    }
+    .card h3 {
+      font-size: 1.3rem;
+      color: #1e1b4b;
+      margin-bottom: 12px;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.6;
+    }
 
-        .logo-container span {
-            color: #ffffff;
-            font-size: 1.6rem;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-        }
+    /* CONTACT & SOCIAL MEDIA SECTION */
+    .contact-social-section {
+      background-color: #111827;
+      padding: 60px 20px;
+      border-top: 1px solid #1e3a8a;
+      margin-top: auto;
+    }
+    .contact-social-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      text-align: left;
+    }
+    .contact-info, .social-media {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .contact-info h3, .social-media h3 {
+      font-size: 1.3rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: #bfdbfe;
+      font-size: 1rem;
+    }
+    .contact-item i {
+      font-size: 1.2rem;
+      color: #ffffff;
+      width: 20px;
+      text-align: center;
+    }
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+    .social-links a {
+      color: #bfdbfe;
+      font-size: 1.5rem;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+    .social-links a:hover {
+      color: #ffffff;
+      transform: scale(1.1);
+    }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
+    /* FOOTER */
+    footer {
+      background-color: #090d16;
+      color: #94a3b8;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid #1e1b4b;
+    }
 
-        .nav-links a {
-            color: #cbd5e1;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: color 0.2s ease, border-bottom 0.2s ease;
-            padding-bottom: 5px;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #ffffff;
-            border-bottom: 2px solid #ffffff;
-        }
-
-        /* HERO HEADER */
-        .page-header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
-            color: #ffffff;
-            text-align: center;
-            padding: 80px 20px;
-            border-bottom: 1px solid #1e3a8a;
-        }
-
-        .page-header h1 {
-            font-size: 2.8rem;
-            color: #ffffff;
-            margin-bottom: 15px;
-            letter-spacing: -0.5px;
-        }
-
-        .page-header p {
-            color: #bfdbfe;
-            font-size: 1.15rem;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        /* MAIN CONTAINER */
-        .container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
-            flex: 1;
-        }
-
-        .category-title {
-            font-size: 1.6rem;
-            margin: 40px 0 20px;
-            color: #f1f5f9;
-            border-left: 5px solid #ffffff;
-            padding-left: 15px;
-            letter-spacing: -0.2px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        /* CARD STYLES with LIGHT PURPLE shades */
-        .card {
-            background: #ffffff; /* White card for high contrast */
-            border: 1px solid #e9d5ff; /* Light purple border */
-            border-radius: 12px;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 4px 10px rgba(168, 85, 247, 0.1); /* Soft purple shadow */
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Subtle Purple Gradient Overlay on Hover */
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(135deg, rgba(233, 213, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(168, 85, 247, 0.2); /* Deeper purple shadow on hover */
-            border-color: #c084fc; /* Darker light purple border on hover */
-        }
-
-        .card:hover::before {
-            opacity: 1;
-        }
-
-        .card > * {
-            position: relative;
-            z-index: 2; /* Keep content above the overlay */
-        }
-
-        .product-image {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 18px;
-            border: 1px solid #f3e8ff; /* Very light purple image border */
-        }
-
-        .card h3 {
-            font-size: 1.3rem;
-            color: #1e1b4b; /* Very dark purple/slate for text */
-            margin-bottom: 10px;
-            letter-spacing: -0.1px;
-        }
-
-        .card p {
-            font-size: 0.95rem;
-            color: #475569; /* Slate grey for description */
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        label {
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #6b21a8; /* Medium purple for label */
-            margin-bottom: 7px;
-        }
-
-        .variant-select {
-            width: 100%;
-            padding: 11px;
-            margin-bottom: 22px;
-            border: 1px solid #d8b4fe; /* Medium purple border */
-            border-radius: 7px;
-            outline: none;
-            background-color: #fdfaff; /* Almost white purple-tinted background */
-            color: #1e1b4b; /* Dark text in dropdown */
-            font-size: 0.95rem;
-            transition: border-color 0.2s ease;
-        }
-
-        .variant-select:focus {
-            border-color: #a855f7; /* Brighter purple on focus */
-        }
-
-        .variant-select option {
-            background-color: #ffffff;
-            color: #1e1b4b;
-        }
-
-        .buy-btn {
-            background-color: #7e22ce; /* Vibrant Purple button */
-            color: #ffffff;
-            border: none;
-            padding: 13px;
-            border-radius: 7px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            width: 100%;
-            transition: background-color 0.2s ease;
-            letter-spacing: 0.2px;
-        }
-
-        .buy-btn:hover {
-            background-color: #6b21a8; /* Darker Purple on hover */
-        }
-
-        /* CONTACT & SOCIAL MEDIA SECTION */
-        .contact-social-section {
-            background-color: #111827; /* Dark but different shade */
-            padding: 60px 20px;
-            border-top: 1px solid #1e3a8a;
-            margin-top: auto;
-        }
-
-        .contact-social-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            text-align: left;
-        }
-
-        .contact-info, .social-media {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .contact-info h3, .social-media h3 {
-            font-size: 1.3rem;
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: #bfdbfe;
-            font-size: 1rem;
-        }
-
-        .contact-item i {
-            font-size: 1.2rem;
-            color: #ffffff;
-            width: 20px; /* Fixed width for alignment */
-            text-align: center;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-links a {
-            color: #bfdbfe;
-            font-size: 1.5rem;
-            transition: color 0.2s ease, transform 0.2s ease;
-        }
-
-        .social-links a:hover {
-            color: #ffffff;
-            transform: scale(1.1);
-        }
-
-        /* FOOTER */
-        footer {
-            background-color: #090d16;
-            color: #94a3b8;
-            text-align: center;
-            padding: 25px 20px;
-            font-size: 0.9rem;
-            border-top: 1px solid #1e1b4b;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        /* Responsive adjustments for headers */
-        @media (max-width: 768px) {
-            .page-header h1 {
-                font-size: 2.2rem;
-            }
-            .page-header p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .hero-section h1 { font-size: 2.2rem; }
+      .hero-section p { font-size: 1rem; }
+      .hero-buttons { flex-direction: column; }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <a href="index.html" class="logo-container">
-            <img src="novapulse logo transparent background png format.png" alt="NovaPulse Logo">
-            <span>NovaPulse</span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html" class="active">Business Store</a></li>
-        </ul>
-    </nav>
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html" class="logo-container">
+      <img src="novapulse logo transparent background png format.png" alt="NovaPulse Logo">
+      <span>NovaPulse</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="products.html">Business Store</a></li>
+    </ul>
+  </nav>
 
-    <!-- HERO HEADER -->
-    <section class="page-header">
-        <h1>NovaPulse Hardware & Store</h1>
-        <p>Enterprise biometric systems, access devices, and workplace computer accessories.</p>
-    </section>
-
-    <!-- MAIN CONTENT -->
-    <div class="container">
-
-        <!-- eSSL SECTION -->
-        <h2 class="category-title">eSSL Biometric Attendance Systems</h2>
-        <div class="grid">
-
-            <div class="card">
-                <div>
-                    <img src="https://via.placeholder.com/300x180/7e22ce/ffffff?text=eSSL+A1+Fingerprint" alt="eSSL A1 Fingerprint" class="product-image">
-                    <h3>eSSL A1</h3>
-                    <p>Compact fingerprint-based attendance machine for small to medium enterprises.</p>
-                    <label for="essl-a1-variant">Select Variant:</label>
-                    <select id="essl-a1-variant" class="variant-select">
-                        <option value="standard">Standard (₹8,990)</option>
-                        <option value="battery">With Battery Backup (₹9,990)</option>
-                    </select>
-                </div>
-                <button class="buy-btn">Inquire / Order</button>
-            </div>
-
-            <div class="card">
-                <div>
-                    <img src="https://via.placeholder.com/300x180/6b21a8/ffffff?text=eSSL+Face+iFace" alt="eSSL iFace" class="product-image">
-                    <h3>eSSL iFace 302</h3>
-                    <p>Advanced facial recognition and fingerprint device with cloud connectivity.</p>
-                    <label for="essl-iface-variant">Select Variant:</label>
-                    <select id="essl-iface-variant" class="variant-select">
-                        <option value="standard">Face + Fingerprint (₹16,490)</option>
-                        <option value="access">With Access Control (₹17,990)</option>
-                    </select>
-                </div>
-                <button class="buy-btn">Inquire / Order</button>
-            </div>
-
-            <div class="card">
-                <div>
-                    <img src="https://via.placeholder.com/300x180/9333ea/ffffff?text=eSSL+RFID+Card" alt="eSSL RFID Card" class="product-image">
-                    <h3>eSSL K90 Pro</h3>
-                    <p>Economic card-based attendance machine with built-in battery backup.</p>
-                    <label for="essl-k90-variant">Select Variant:</label>
-                    <select id="essl-k90-variant" class="variant-select">
-                        <option value="card">RFID Card Only (₹7,490)</option>
-                        <option value="f-card">Fingerprint + Card (₹8,490)</option>
-                    </select>
-                </div>
-                <button class="buy-btn">Inquire / Order</button>
-            </div>
-
-        </div>
-
-        <!-- HIKVISION SECTION -->
-        <h2 class="category-title">Hikvision Access Control & Biometrics</h2>
-        <div class="grid">
-
-            <div class="card">
-                <div>
-                    <img src="https://via.placeholder.com/300x180/bfdbfe/0f172a?text=Hikvision+MinMoe+Face" alt="Hikvision MinMoe" class="product-image">
-                    <h3>Hikvision MinMoe</h3>
-                    <p>Industrial facial recognition terminal with ultra-fast identification.</p>
-                    <label for="hik-minmoe-variant">Select Model:</label>
-                    <select id="hik-minmoe-variant" class="variant-select">
-                        <option value="lite">DS-K1T341AM (₹19,990)</option>
-                        <option value="pro">DS-K1T671 (₹24,490)</option>
-                    </select>
-                </div>
-                <button class="buy-btn">Inquire / Order</button>
-            </div>
-
-            <div class="card">
-                <div>
-                    <img src="https://via.placeholder.com/300x180/3b82f6/ffffff?text=Hikvision+Card+Reader" alt="Hikvision Card Reader" class="product-image">
-                    <h3>Hikvision Access Terminal</h3>
-                    <p>Standalone multi-door access control terminal supporting card and pin.</p>
-                    <label for="hik-access-variant">Select Model:</label>
-                    <select id="hik-access-variant" class="variant-select">
-                        <option value="single">Single Door (₹12,990)</option>
-                        <option value="multi">Multi Door Controller (₹21,490)</option>
-                    </select>
-                </div>
-                <button class="buy-btn">Inquire / Order</button>
-            </div>
-
-        </div>
-
-        <!-- OTHER PRODUCTS SECTION -->
-        <h2 class="category-title">Other Electrical Products & Accessories</h2>
-        <div class="grid">
-
-            <div class="card">
-                <div>
-                    <img src="https://via.placeholder.com/300x180/d8b4fe/1e1b4b?text=Wired+Keyboard" alt="Wired Keyboard" class="product-image">
-                    <h3>eSSL KB-100 Keyboard</h3>
-                    <p>Standard wired USB keyboard, durable for daily office use.</p>
-                </div>
-                <button class="buy-btn">Buy for ₹699</button>
-            </div>
-
-            <div class="card">
-                <div>
-                    <img src="https://via.placeholder.com/300x180/e9d5ff/1e1b4b?text=Optical+Mouse" alt="Optical Mouse" class="product-image">
-                    <h3>eSSL M-50 Optical Mouse</h3>
-                    <p>Simple and ergonomic wired optical mouse for workstation efficiency.</p>
-                </div>
-                <button class="buy-btn">Buy for ₹399</button>
-            </div>
-
-            <div class="card">
-                <div>
-                    <img src="https://via.placeholder.com/300x180/f3e8ff/1e1b4b?text=Card+Printer" alt="Card Printer" class="product-image">
-                    <h3>Hiti CS-200e Card Printer</h3>
-                    <p>Ideal solution for ID card printing, single-sided, high-resolution.</p>
-                </div>
-                <button class="buy-btn">Buy for ₹34,990</button>
-            </div>
-
-            <div class="card">
-                <div>
-                    <img src="https://via.placeholder.com/300x180/fdfaff/1e1b4b?text=Door+Lock" alt="Door Lock" class="product-image">
-                    <h3>Electromagnetic Door Lock</h3>
-                    <p>Heavy-duty magnetic lock (600lbs) for access control systems.</p>
-                </div>
-                <button class="buy-btn">Buy for ₹3,490</button>
-            </div>
-
-        </div>
-
+  <!-- HERO HEADER -->
+  <section class="hero-section">
+    <h1>Smart Human Capital & Hardware Solutions</h1>
+    <p>Streamline workforce management with seamless biometric tracking, access control, and integrated HRMS software designed for modern enterprises.</p>
+    <div class="hero-buttons">
+      <a href="products.html" class="btn-primary">Explore Store</a>
+      <a href="#solutions" class="btn-secondary">Learn More</a>
     </div>
+  </section>
 
-    <!-- CONTACT & SOCIAL MEDIA SECTION -->
-    <section class="contact-social-section">
-        <div class="contact-social-container">
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>123 NovaStreet, Tech City, PIN 560001</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>+91 98765 43210</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>support@novapulse.in</span>
-                </div>
-            </div>
-            <div class="social-media">
-                <h3>Follow Us</h3>
-                <p style="color: #bfdbfe; margin-bottom: 10px;">Stay updated with our latest products and offers.</p>
-                <div class="social-links">
-                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
+  <!-- MAIN CONTENT -->
+  <div class="container" id="solutions">
+    <h2 class="section-title">Core Enterprise Solutions</h2>
+    <div class="grid">
+      <div class="card">
+        <div>
+          <i class="fas fa-fingerprint card-icon"></i>
+          <h3>Biometric Attendance</h3>
+          <p>High-accuracy fingerprint and facial recognition systems that sync attendance logs directly to your payroll processing suite.</p>
         </div>
-    </section>
+      </div>
+      <div class="card">
+        <div>
+          <i class="fas fa-door-open card-icon"></i>
+          <h3>Access Control</h3>
+          <p>Multi-door access controllers, electromagnetic locks, and card terminals to secure office perimeters effortlessly.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div>
+          <i class="fas fa-users-gear card-icon"></i>
+          <h3>Integrated HRMS Software</h3>
+          <p>Centralize employee profiles, leave tracking, shift rosters, and real-time biometric reporting under a single platform.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; NovaPulse. All rights reserved.</p>
-    </footer>
+  <!-- CONTACT & SOCIAL MEDIA SECTION -->
+  <section class="contact-social-section">
+    <div class="contact-social-container">
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>123 NovaStreet, Tech City, PIN 560001</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <span>+91 98765 43210</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>support@novapulse.in</span>
+        </div>
+      </div>
+      <div class="social-media">
+        <h3>Follow Us</h3>
+        <p style="color: #bfdbfe; margin-bottom: 10px;">Stay updated with our latest products and offers.</p>
+        <div class="social-links">
+          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; NovaPulse. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
