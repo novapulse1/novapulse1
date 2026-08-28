@@ -83,7 +83,7 @@
     <header class="fixed top-0 w-full z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3">
-                <img src="Logo.png" alt="Nova Pulse Logo" class="h-14 md:h-16 w-auto object-contain">         
+                <img src="Logo.png" alt="Nova Pulse Logo" class="h-14 md:h-16 w-auto object-contain" width="180" height="64">         
             </a>
             
             <!-- Desktop Navigation -->
@@ -174,36 +174,103 @@
         </div>
     </header>
 
-    <!-- 1. HERO SECTION -->
+    <!-- 1. HERO SECTION WITH PRODUCT VISUAL -->
     <section id="hero" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-purple-100/60 via-slate-50 to-slate-50">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,#e9d5ff,transparent_65%)]"></div>
-        <div class="relative max-w-5xl mx-auto px-6 text-center z-10">
+        <div class="relative max-w-7xl mx-auto px-6 z-10">
             
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-brand-100 text-brand-900 border border-brand-200 mb-6">
-                <span class="w-2 h-2 rounded-full bg-brand-700 animate-pulse"></span>
-                Hire. Secure. Grow.
-            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Hero Content -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-brand-100 text-brand-900 border border-brand-200 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-brand-700 animate-pulse"></span>
+                        Hire. Secure. Grow.
+                    </div>
 
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
-                The Pulse of Every<br>
-                <span class="bg-gradient-to-r from-brand-900 via-purple-800 to-brand-700 bg-clip-text text-transparent">Growing Business</span>
-            </h1>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+                        The Pulse of Every<br>
+                        <span class="bg-gradient-to-r from-brand-900 via-purple-800 to-brand-700 bg-clip-text text-transparent">Growing Business</span>
+                    </h1>
 
-            <p class="text-base md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-                Hire better. Secure your operations. Grow your business with integrated HRMS, biometric attendance, security, recruitment, and B2B growth solutions.
-            </p>
+                    <p class="text-base md:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                        Hire better. Secure your operations. Grow your business with integrated HRMS, biometric attendance, security, recruitment, and B2B growth solutions.
+                    </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button onclick="openDemoModal('General Inquiry')" class="px-8 py-4 rounded-xl bg-brand-800 hover:bg-brand-900 text-white font-bold text-base transition-all shadow-lg shadow-brand-900/20 hover:scale-102 w-full sm:w-auto inline-flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-calendar-check text-brand-200"></i> Book a Free Demo
-                </button>
-                <a href="https://wa.me/+918796623604" target="_blank" class="px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 font-bold text-base transition-all shadow-sm w-full sm:w-auto inline-flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-emerald-600 text-lg"></i> Talk to an Expert
-                </a>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-10">
+                        <button onclick="openDemoModal('General Inquiry')" class="px-8 py-4 rounded-xl bg-brand-800 hover:bg-brand-900 text-white font-bold text-base transition-all shadow-lg shadow-brand-900/20 hover:scale-102 w-full sm:w-auto inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calendar-check text-brand-200"></i> Book a Free Demo
+                        </button>
+                        <a href="https://wa.me/+918796623604" target="_blank" rel="noopener" class="px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 font-bold text-base transition-all shadow-sm w-full sm:w-auto inline-flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-600 text-lg"></i> Talk to an Expert
+                        </a>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-500 font-medium">
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600 font-bold"></i> Live Cloud Integration</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600 font-bold"></i> Verified Hardware Compatibility</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600 font-bold"></i> Multi-Location Deployment</div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Platform Mockup -->
+                <div class="lg:col-span-5">
+                    <div class="relative bg-white/95 backdrop-blur-md rounded-3xl border border-slate-200 p-5 shadow-2xl overflow-hidden hover:shadow-brand-900/10 transition-shadow">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                                <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+                                <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+                                <span class="text-[11px] font-bold text-slate-400 ml-2">Nova Pulse Workspace Hub</span>
+                            </div>
+                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-50 text-brand-800 font-bold">Live Sync</span>
+                        </div>
+
+                        <div class="space-y-3.5">
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200/80">
+                                    <div class="text-[11px] text-slate-500">Biometric Attendance</div>
+                                    <div class="text-base font-extrabold text-slate-900 mt-0.5">99.4% On-Time</div>
+                                    <div class="text-[10px] text-emerald-600 font-bold mt-1"><i class="fa-solid fa-arrow-trend-up"></i> Real-time sync</div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200/80">
+                                    <div class="text-[11px] text-slate-500">Payroll Processing</div>
+                                    <div class="text-base font-extrabold text-slate-900 mt-0.5">1-Click Ready</div>
+                                    <div class="text-[10px] text-brand-800 font-bold mt-1"><i class="fa-solid fa-shield-check"></i> Zero errors</div>
+                                </div>
+                            </div>
+
+                            <div class="p-3 bg-brand-50/70 rounded-xl border border-brand-200/80 flex items-center justify-between">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-800 text-white flex items-center justify-center text-xs">
+                                        <i class="fa-solid fa-fingerprint"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-bold text-slate-900">Device LAN/Cloud Log</div>
+                                        <div class="text-[10px] text-slate-500">Face Recognition • Push active</div>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">Connected</span>
+                            </div>
+
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200/80 flex items-center justify-between">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-8 h-8 rounded-lg bg-purple-100 text-brand-800 flex items-center justify-center text-xs">
+                                        <i class="fa-solid fa-user-check"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-bold text-slate-900">Sales & Leadership Pipeline</div>
+                                        <div class="text-[10px] text-slate-500">Candidate verification & qualification</div>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded-full">Verified</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Value Matrix Cards -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl mx-auto pt-10 border-t border-slate-200/80 text-left">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-5xl mx-auto pt-10 border-t border-slate-200/80 text-left">
                 <div class="bg-white/90 backdrop-blur p-4 rounded-2xl border border-slate-200 shadow-sm">
                     <i class="fa-solid fa-users-gear text-brand-800 text-lg mb-1"></i>
                     <div class="font-bold text-sm text-slate-900">Workforce Tech</div>
@@ -357,7 +424,7 @@
         </div>
     </section>
 
-    <!-- 4. FLAGSHIP SECTION: HRMS + BIOMETRIC INTEGRATION -->
+    <!-- 4. FLAGSHIP SECTION: HRMS + BIOMETRIC INTEGRATION (WITH REAL PRODUCT ASSET) -->
     <section id="workforce-hrms" class="py-24 bg-slate-50 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6">
             
@@ -367,9 +434,62 @@
                 <p class="text-slate-600 mt-4 text-sm md:text-base">Connect employee attendance, HRMS, and payroll into one streamlined, error-free workflow.</p>
             </div>
 
+            <!-- PRODUCT SCREENSHOT & OVERVIEW GRID -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+                <div class="lg:col-span-6">
+                    <div class="relative rounded-3xl overflow-hidden border border-slate-200 bg-white p-3 shadow-xl group">
+                        <img src="Hrms & payroll.png" 
+                             alt="Nova Pulse HRMS employee attendance and payroll management software interface" 
+                             loading="lazy"
+                             width="800"
+                             height="500"
+                             class="w-full h-auto rounded-2xl object-cover group-hover:scale-[1.02] transition-transform duration-500">
+                        <div class="p-4 bg-slate-50/90 backdrop-blur mt-3 rounded-xl border border-slate-100 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-brand-700 animate-pulse"></span>
+                                <span class="text-xs font-bold text-slate-900">Workforce & Payroll Intelligence</span>
+                            </div>
+                            <span class="text-[10px] font-semibold text-slate-500">Automated Month-End Slips</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-4">
+                    <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-9 h-9 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-base">Employee Lifecycle Management</h4>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">Centralized digital onboarding records, structured departmental hierarchies, leave approvals, and employee self-service.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-9 h-9 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-solid fa-calculator"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-base">Automated Payroll Systems</h4>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">Eliminate calculation delays. Real-time sync with biometric logs handles PF, ESI, tax deductions, and generates salary slips.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-9 h-9 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-base">Multi-Branch Architecture</h4>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">Consolidate attendance and shift schedules across multiple branches, warehouses, or stores into one central management dashboard.</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- UNIFIED WORKFLOW VISUALIZATION -->
-            <div class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-md mb-16">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-brand-800 mb-6 text-center">Unified Operational Flow</h3>
+            <div class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-md mb-12">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-brand-800 mb-6 text-center">Connected Workforce Architecture</h3>
                 <div class="grid grid-cols-2 md:grid-cols-6 gap-4 text-center">
                     
                     <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
@@ -423,40 +543,6 @@
                 </div>
             </div>
 
-            <!-- Features Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                    <i class="fa-solid fa-users text-brand-800 text-xl mb-3"></i>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">Employee Management</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Centralized digital personnel records, onboarding checklists, department hierarchies, and employee self-service.</p>
-                </div>
-                <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                    <i class="fa-solid fa-calculator text-brand-800 text-xl mb-3"></i>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">Automated Payroll Systems</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Zero-error tax calculations, PF/ESI statutory compliance, automated salary slips, and direct bank payout registers.</p>
-                </div>
-                <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                    <i class="fa-solid fa-network-wired text-brand-800 text-xl mb-3"></i>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">Multi-Branch Architecture</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Consolidate attendance and shift logs across different branches, retail stores, or warehouses into one central dashboard.</p>
-                </div>
-                <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                    <i class="fa-solid fa-user-check text-brand-800 text-xl mb-3"></i>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">Task & Daily Accountability</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Enforce daily deliverable logging and objective productivity tracking across remote, hybrid, or on-site teams.</p>
-                </div>
-                <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                    <i class="fa-solid fa-mobile-screen text-brand-800 text-xl mb-3"></i>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">Employee Self-Service (ESS)</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Allow employees to check shift schedules, apply for leave, view attendance history, and download payslips directly.</p>
-                </div>
-                <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                    <i class="fa-solid fa-shield-virus text-brand-800 text-xl mb-3"></i>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">Compliance & Risk Auditing</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Secure candidate background audits and encrypted data handling deployed with Protect Solution standards.</p>
-                </div>
-            </div>
-
             <div class="text-center">
                 <button onclick="openDemoModal('HRMS & Payroll')" class="px-8 py-4 bg-brand-800 hover:bg-brand-900 text-white font-bold rounded-xl shadow-lg transition-all inline-flex items-center gap-2">
                     <i class="fa-solid fa-calendar-check text-brand-200"></i> Book an HRMS Demo
@@ -466,7 +552,7 @@
         </div>
     </section>
 
-    <!-- 5. SMART BIOMETRIC ATTENDANCE HARDWARE -->
+    <!-- 5. SMART BIOMETRIC ATTENDANCE HARDWARE WITH VISUAL PRODUCT CARDS -->
     <section id="biometrics" class="py-24 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6">
             
@@ -478,36 +564,76 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                 
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center text-xl font-bold mb-4">
-                        <i class="fa-solid fa-fingerprint"></i>
+                <!-- Product 1 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="h-36 w-full rounded-xl bg-purple-50/80 border border-purple-100 flex items-center justify-center mb-4 text-brand-800 group-hover:scale-102 transition-transform">
+                            <svg class="w-16 h-16 text-brand-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 12c0-3 2.5-5 5-5v0a5 5 0 0 1 5 5v4a5 5 0 0 1-5 5c-4 0-7-3-7-7v-3a7 7 0 0 0-7-7"/>
+                                <path d="M5 14v1a7 7 0 0 0 7 7"/>
+                                <path d="M9 13v1a3 3 0 0 0 3 3"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-base mb-1">Fingerprint Attendance</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">High-speed optical biometric scanners with real-time push data protocols for error-free clock-ins.</p>
                     </div>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">Fingerprint Attendance</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">High-speed optical biometric scanners with real-time push data protocols for error-free clock-ins.</p>
+                    <div class="mt-4 pt-3 border-t border-slate-200/80 text-[11px] font-bold text-brand-800">
+                        <i class="fa-solid fa-circle-check text-emerald-500"></i> Fast Clock-In
+                    </div>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center text-xl font-bold mb-4">
-                        <i class="fa-solid fa-face-smile"></i>
+                <!-- Product 2 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="h-36 w-full rounded-xl bg-purple-50/80 border border-purple-100 flex items-center justify-center mb-4 text-brand-800 group-hover:scale-102 transition-transform">
+                            <svg class="w-16 h-16 text-brand-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 16v1"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-base mb-1">Face Recognition</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Touchless AI-powered facial recognition machines for rapid verification, even in low-light environments.</p>
                     </div>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">Face Recognition</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Touchless AI-powered facial recognition machines for rapid verification, even in low-light conditions.</p>
+                    <div class="mt-4 pt-3 border-t border-slate-200/80 text-[11px] font-bold text-brand-800">
+                        <i class="fa-solid fa-circle-check text-emerald-500"></i> Contactless Capture
+                    </div>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center text-xl font-bold mb-4">
-                        <i class="fa-solid fa-address-card"></i>
+                <!-- Product 3 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="h-36 w-full rounded-xl bg-purple-50/80 border border-purple-100 flex items-center justify-center mb-4 text-brand-800 group-hover:scale-102 transition-transform">
+                            <svg class="w-16 h-16 text-brand-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="14" x="2" y="5" rx="2"/>
+                                <line x1="2" x2="22" y1="10" y2="10"/>
+                                <circle cx="7" cy="15" r="1"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-base mb-1">RFID & Smart Cards</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Proximity card solutions tailored for factories, corporate facilities, and rapid batch shift changes.</p>
                     </div>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">RFID & Smart Cards</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Proximity card solutions tailored for factories, corporate facilities, and rapid batch shift changes.</p>
+                    <div class="mt-4 pt-3 border-t border-slate-200/80 text-[11px] font-bold text-brand-800">
+                        <i class="fa-solid fa-circle-check text-emerald-500"></i> High-Throughput Shifts
+                    </div>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center text-xl font-bold mb-4">
-                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                <!-- Product 4 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-500 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="h-36 w-full rounded-xl bg-purple-50/80 border border-purple-100 flex items-center justify-center mb-4 text-brand-800 group-hover:scale-102 transition-transform">
+                            <svg class="w-16 h-16 text-brand-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>
+                                <path d="M12 12v9"/>
+                                <path d="m16 16-4-4-4 4"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-base mb-1">Cloud Synchronization</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Automatic Wi-Fi, LAN, or 4G data push directly into central HRMS without manual pen-drive extraction.</p>
                     </div>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">Cloud Synchronization</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Automatic Wi-Fi, LAN, or 4G data push directly into central HRMS without manual pen-drive extraction.</p>
+                    <div class="mt-4 pt-3 border-t border-slate-200/80 text-[11px] font-bold text-brand-800">
+                        <i class="fa-solid fa-circle-check text-emerald-500"></i> Zero Manual Effort
+                    </div>
                 </div>
 
             </div>
@@ -588,7 +714,7 @@
         </div>
     </section>
 
-    <!-- 7. HIRING & RECRUITMENT SERVICES -->
+    <!-- 7. HIRING & RECRUITMENT SERVICES (WITH REAL RECRUITMENT ASSET) -->
     <section id="hiring" class="py-24 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6">
             
@@ -598,40 +724,88 @@
                 <p class="text-slate-600 mt-4 text-sm md:text-base">From finding candidates to building high-performing teams, Nova Pulse supports businesses throughout the hiring process.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center text-lg font-bold mb-3">
-                        <i class="fa-solid fa-user-tie"></i>
+            <!-- HIRING VISUAL STORY WITH IMAGE ASSET -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+                <div class="lg:col-span-6 order-2 lg:order-1 space-y-4">
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-9 h-9 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-base">Executive & Leadership Search</h4>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">Headhunting leadership talent and functional department heads who align with your company vision and execute strategy.</p>
                     </div>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">Executive Search</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Headhunting leadership talent and functional heads who align with company culture and execute strategy.</p>
+
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-9 h-9 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-base">Sales & Revenue Talent</h4>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">Proven B2B sales reps, SDRs, and closing executives rigorously vetted for past quota attainment and revenue performance.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-9 h-9 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-solid fa-clipboard-check"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-base">Candidate Background Audits</h4>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">Employment history cross-checks, credential verification, and risk management auditing for corporate integrity.</p>
+                    </div>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center text-lg font-bold mb-3">
-                        <i class="fa-solid fa-headset"></i>
+                <div class="lg:col-span-6 order-1 lg:order-2">
+                    <div class="relative rounded-3xl overflow-hidden border border-slate-200 bg-white p-3 shadow-xl group">
+                        <img src="Hiring.png" 
+                             alt="Nova Pulse corporate recruitment, candidate interviewing, and executive hiring process" 
+                             loading="lazy"
+                             width="800"
+                             height="500"
+                             class="w-full h-auto rounded-2xl object-cover group-hover:scale-[1.02] transition-transform duration-500">
+                        <div class="p-4 bg-slate-50/90 backdrop-blur mt-3 rounded-xl border border-slate-100 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-brand-700 animate-pulse"></span>
+                                <span class="text-xs font-bold text-slate-900">Vetted Candidate Sourcing Pipeline</span>
+                            </div>
+                            <span class="text-[10px] font-semibold text-slate-500">Quality-First Matching</span>
+                        </div>
                     </div>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">Sales & Revenue Hiring</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Proven B2B sales reps, SDRs, and closers vetted for quota attainment and revenue performance.</p>
                 </div>
+            </div>
 
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center text-lg font-bold mb-3">
-                        <i class="fa-solid fa-users-viewfinder"></i>
+            <!-- RECRUITMENT TIMELINE -->
+            <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 mb-12">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-brand-800 mb-6 text-center">Structured Recruitment Pipeline</h3>
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-4 text-center">
+                    <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+                        <div class="text-xs font-mono font-bold text-brand-700 mb-1">01</div>
+                        <div class="font-bold text-xs text-slate-900">Requirement</div>
                     </div>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">Scalable Corporate Staffing</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Structured candidate sourcing pipelines for support, operations, and back-office roles at scale.</p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center text-lg font-bold mb-3">
-                        <i class="fa-solid fa-clipboard-check"></i>
+                    <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+                        <div class="text-xs font-mono font-bold text-brand-700 mb-1">02</div>
+                        <div class="font-bold text-xs text-slate-900">Sourcing</div>
                     </div>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">Candidate Background Audits</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Employment history cross-checks, credential verification, and risk management auditing.</p>
+                    <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+                        <div class="text-xs font-mono font-bold text-brand-700 mb-1">03</div>
+                        <div class="font-bold text-xs text-slate-900">Screening</div>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+                        <div class="text-xs font-mono font-bold text-brand-700 mb-1">04</div>
+                        <div class="font-bold text-xs text-slate-900">Interview</div>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+                        <div class="text-xs font-mono font-bold text-brand-700 mb-1">05</div>
+                        <div class="font-bold text-xs text-slate-900">Verification</div>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+                        <div class="text-xs font-mono font-bold text-brand-700 mb-1">06</div>
+                        <div class="font-bold text-xs text-slate-900">Onboarding</div>
+                    </div>
                 </div>
-
             </div>
 
             <div class="text-center">
@@ -643,7 +817,7 @@
         </div>
     </section>
 
-    <!-- 8. BUSINESS GROWTH & B2B LEAD PIPELINES -->
+    <!-- 8. BUSINESS GROWTH & B2B LEAD PIPELINES (WITH REAL LEAD ASSET) -->
     <section id="growth" class="py-24 bg-slate-50 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6">
             
@@ -653,8 +827,61 @@
                 <p class="text-slate-600 mt-4 text-sm md:text-base">Build a predictable B2B pipeline with targeted prospecting, lead generation, and appointment setting.</p>
             </div>
 
+            <!-- GROWTH ASSET VISUAL ROW -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+                <div class="lg:col-span-6">
+                    <div class="relative rounded-3xl overflow-hidden border border-slate-200 bg-white p-3 shadow-xl group">
+                        <img src="Lead gen.png" 
+                             alt="Nova Pulse B2B lead generation campaign monitoring and prospecting dashboard" 
+                             loading="lazy"
+                             width="800"
+                             height="500"
+                             class="w-full h-auto rounded-2xl object-cover group-hover:scale-[1.02] transition-transform duration-500">
+                        <div class="p-4 bg-slate-50/90 backdrop-blur mt-3 rounded-xl border border-slate-100 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
+                                <span class="text-xs font-bold text-slate-900">Multi-Channel Outbound Funnels</span>
+                            </div>
+                            <span class="text-[10px] font-semibold text-slate-500">Qualified Meetings</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-4">
+                    <div class="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-9 h-9 rounded-lg bg-purple-100 text-brand-800 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-base">LinkedIn B2B Prospecting</h4>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">Reach founders, HR directors, and enterprise decision-makers with personalized messaging sequences that convert into sales calls.</p>
+                    </div>
+
+                    <div class="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-9 h-9 rounded-lg bg-purple-100 text-brand-800 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-base">Appointment Setting</h4>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">Dedicated SDR outbound calling teams to qualify prospects and secure high-intent meetings directly on your sales calendar.</p>
+                    </div>
+
+                    <div class="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-9 h-9 rounded-lg bg-purple-100 text-emerald-600 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-base">WhatsApp Broadcasts via Official API</h4>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">Automated broadcast workflows and compliant message funnels that re-engage prospects and generate warm commercial inquiries.</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- 5-STEP OUTBOUND METHODOLOGY -->
-            <div class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-md mb-16">
+            <div class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-md mb-12">
                 <h3 class="text-xs font-bold uppercase tracking-widest text-brand-800 mb-6 text-center">5-Step Outbound Methodology</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-center">
                     
@@ -688,25 +915,6 @@
                         <p class="text-[11px] text-slate-500 leading-relaxed">Deliver ready prospects directly to your sales team.</p>
                     </div>
 
-                </div>
-            </div>
-
-            <!-- Growth Capabilities Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                    <i class="fa-brands fa-linkedin text-brand-800 text-2xl mb-3"></i>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">LinkedIn B2B Prospecting</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Reach founders, HR heads, and C-level executives with targeted messaging sequences that convert into sales calls.</p>
-                </div>
-                <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                    <i class="fa-solid fa-calendar-check text-brand-800 text-2xl mb-3"></i>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">Appointment Setting</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Dedicated SDR outbound calling teams to qualify prospects and secure high-intent meetings on your calendar.</p>
-                </div>
-                <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                    <i class="fa-brands fa-whatsapp text-emerald-600 text-2xl mb-3"></i>
-                    <h4 class="font-bold text-slate-900 text-base mb-1">WhatsApp & Broadcast Outreach</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">Automated broadcast workflows via official APIs to re-engage past leads and drive direct commercial inquiries.</p>
                 </div>
             </div>
 
@@ -995,7 +1203,7 @@
                 <button onclick="openDemoModal('General Inquiry')" class="px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-base transition-all shadow-lg w-full sm:w-auto">
                     Book a Free Demo
                 </button>
-                <a href="https://wa.me/+918796623604" target="_blank" class="px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-bold text-base transition-all w-full sm:w-auto">
+                <a href="https://wa.me/+918796623604" target="_blank" rel="noopener" class="px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-bold text-base transition-all w-full sm:w-auto">
                     Talk to an Expert
                 </a>
             </div>
@@ -1010,7 +1218,7 @@
                 
                 <!-- Brand Info -->
                 <div class="lg:col-span-2 space-y-4">
-                    <img src="Logo.png" alt="Nova Pulse" class="h-14 w-auto object-contain">
+                    <img src="Logo.png" alt="Nova Pulse" class="h-14 w-auto object-contain" width="160" height="56">
                     <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
                         Nova Pulse — The Pulse of Every Growing Business. Enterprise HRMS, Biometric Attendance, Security Infrastructure, Hiring, and B2B Growth Solutions.
                     </p>
