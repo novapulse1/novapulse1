@@ -1,20 +1,15 @@
 import { serializeJsonLd } from "@/lib/json-ld";
 import { Hero } from "@/components/sections/hero";
-import { TrustStrip } from "@/components/sections/trust-strip";
+import { TrustBand } from "@/components/sections/trust-band";
+import { Story } from "@/components/sections/story";
 import { Pillars } from "@/components/sections/pillars";
-import { StatsBand } from "@/components/sections/stats-band";
 import { Hrms } from "@/components/sections/hrms";
-import { Biometrics } from "@/components/sections/biometrics";
-import { Security } from "@/components/sections/security";
-import { Hiring } from "@/components/sections/hiring";
-import { Growth } from "@/components/sections/growth";
+import { ServicesGrid } from "@/components/sections/services-grid";
 import { HowItWorks } from "@/components/sections/how-it-works";
-import { IndustriesStrip } from "@/components/sections/industries-strip";
 import { WhyUs } from "@/components/sections/why-us";
-import { Clients } from "@/components/sections/clients";
+import { Sectors } from "@/components/sections/sectors";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Faq } from "@/components/sections/faq";
-import { About } from "@/components/sections/about";
 import { FinalCta } from "@/components/sections/final-cta";
 import { faqs } from "@/lib/faqs";
 
@@ -28,6 +23,15 @@ const faqSchema = {
   })),
 };
 
+/**
+ * Twelve sections, in the order a buyer actually reads: what we do, proof that
+ * we exist, what the company is, the positioning, the flagship product in
+ * depth, the rest of the range as cards, how a rollout runs, why us, proof,
+ * objections, ask.
+ *
+ * Depth belongs on /services/<slug> and /industries/<slug> — the homepage links
+ * to them rather than restating them, which is what it used to do.
+ */
 export default function Home() {
   return (
     <>
@@ -36,21 +40,16 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqSchema) }}
       />
       <Hero />
-      <TrustStrip />
+      <TrustBand />
+      <Story />
       <Pillars />
-      <StatsBand />
       <Hrms />
-      <Biometrics />
-      <Security />
-      <Hiring />
-      <Growth />
-      <IndustriesStrip />
+      <ServicesGrid />
       <HowItWorks />
       <WhyUs />
-      <Clients />
+      <Sectors />
       <Testimonials />
       <Faq />
-      <About />
       <FinalCta />
     </>
   );
